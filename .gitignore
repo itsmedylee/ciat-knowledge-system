@@ -1,0 +1,7 @@
+# 도구/로컬 설정 (콘텐츠 아님)
+.claude/
+.obsidian/
+
+# OS/임시
+Thumbs.db
+.DS_Store
