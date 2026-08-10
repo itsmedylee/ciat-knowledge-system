@@ -1,0 +1,1292 @@
+좋습니다. 두 자료를 기준으로 **중복을 제거하고, “평가보고서 읽기 → 감사인의 Challenge → 증거 확보 → 결론” 순서로 다시 설계한 통합본**입니다. 원문 사례집이 아니라, 실제 손상검토·외부평가보고서 리뷰 때 반복해서 쓰는 **실무 WIKI 정본**에 가깝게 구성했습니다. 
+
+---
+title: DCF·손상평가 외부평가보고서 리뷰 실무
+type: topic
+domain: 회계감사
+topic: 가치평가
+subtopics:
+  - 손상평가
+  - DCF
+  - WACC
+  - 사업계획
+  - Terminal Value
+  - IFRS 16
+  - 외부평가보고서
+  - Forecast Accuracy
+status: integrated
+---
+
+# DCF·손상평가 외부평가보고서 리뷰 실무
+
+## 0. 이 문서의 목적
+
+이 문서는 외부평가보고서 또는 회사 자체 DCF 손상평가를 감사인이 검토할 때 필요한 판단체계를 정리한 실무 학습노트다.
+
+핵심 목적은 평가모형의 계산을 다시 수행하는 데 있지 않다.
+
+감사인이 확인해야 하는 것은 다음 다섯 가지다.
+
+1. **평가대상과 회수가능액의 범위가 일치하는가**
+2. **현금흐름과 할인율이 동일한 경제적 전제를 공유하는가**
+3. **사업계획이 과거 실적과 외부 시장자료에 의해 뒷받침되는가**
+4. **매출·비용·CAPEX·운전자본 가정 사이에 논리적 정합성이 있는가**
+5. **Terminal Value가 실제 정상상태를 나타내는가**
+
+결국 DCF Review는 숫자 검산이 아니라 다음 구조를 검증하는 업무다.
+
+> **기준서 및 평가목적  
+> → 회사의 주장  
+> → 감사인의 Challenge  
+> → 외부·내부 증거  
+> → 재계산 및 Cross-check  
+> → 회계적 결론**
+
+---
+
+# 1. 가장 먼저 확인할 것: 무엇을 평가하고 있는가
+
+DCF를 검토하기 전에 반드시 평가대상을 먼저 확정해야 한다.
+
+## 1.1 평가단위
+
+손상검토에서는 평가단위가 개별자산인지 CGU인지 확인한다.
+
+검토사항:
+
+- 해당 자산이 독립적인 현금유입을 창출하는가
+- 그렇지 않다면 어느 CGU에 포함되는가
+- 전기와 CGU 구성이 일관적인가
+- 조직개편, 사업양수도, 공장 폐쇄 등으로 CGU 변경이 필요한가
+- 영업권이 어느 CGU 또는 CGU 집단에 배분되어 있는가
+
+평가단위가 잘못되면 이후의 DCF가 아무리 정교해도 의미가 없다.
+
+---
+
+## 1.2 회수가능액의 범위
+
+손상평가의 기본 논리는 다음과 같다.
+
+> 회수가능액 = 처분부대원가 차감 공정가치와 사용가치 중 큰 금액
+
+따라서 회사가 DCF를 수행했다고 해서 반드시 VIU라고 단정하면 안 된다.
+
+먼저 다음을 확인한다.
+
+- 사용가치인지
+- 처분부대원가 차감 공정가치인지
+- 다른 평가목적의 공정가치인지
+- 거래가치평가인지
+- 기업결합 관련 PPA인지
+
+평가목적이 다르면 현금흐름에 포함할 수 있는 가정도 달라진다.
+
+---
+
+# 2. 가장 중요한 Matching Principle
+
+DCF 리뷰 전체를 관통하는 핵심은 **비교대상 범위의 일치**다.
+
+다음 세 가지가 동일한 basis에 있어야 한다.
+
+> **Cash Flow  
+> ↔ Discount Rate  
+> ↔ Carrying Amount**
+
+예를 들어 FCFF를 사용하여 Enterprise Value를 계산했다면 비교대상 장부금액 역시 영업자산 및 영업부채를 중심으로 동일한 범위에서 구성되어야 한다.
+
+---
+
+# 3. FCFF, FCFE와 할인율의 일치
+
+## 3.1 FCFF 방식
+
+일반적인 FCFF는 다음과 같다.
+
+\[
+FCFF
+=
+NOPLAT
++
+D\&A
+-
+CAPEX
+-
+\Delta NWC
+\]
+
+FCFF는 채권자와 주주 모두에게 귀속되는 현금흐름이다.
+
+따라서:
+
+> **FCFF → WACC → Enterprise Value**
+
+의 구조가 된다.
+
+---
+
+## 3.2 FCFE 방식
+
+FCFE는 주주에게 귀속되는 현금흐름이다.
+
+따라서:
+
+> **FCFE → Cost of Equity → Equity Value**
+
+가 된다.
+
+FCFF를 Ke로 할인하거나 FCFE를 WACC로 할인하면 평가구조 자체가 잘못된 것이다.
+
+---
+
+# 4. 리뷰 순서
+
+평가보고서를 받았을 때 WACC부터 검토하는 것은 효율적이지 않을 수 있다.
+
+실무적으로는 다음 순서를 권장한다.
+
+## STEP 1. 평가대상과 Carrying Amount
+
+## STEP 2. 전기 Forecast Accuracy
+
+## STEP 3. Revenue
+
+## STEP 4. Cost / Margin
+
+## STEP 5. CAPEX / Capacity / Depreciation
+
+## STEP 6. NWC
+
+## STEP 7. Terminal Value
+
+## STEP 8. WACC
+
+## STEP 9. Sensitivity
+
+## STEP 10. Disclosure / Tie-out
+
+사업계획과 Terminal Value에 구조적인 오류가 있다면 WACC 20~30bp 차이를 정밀검토하는 것보다 훨씬 중요한 이슈가 된다.
+
+---
+
+# 5. Forecast Accuracy / Look-back
+
+반복 평가에서 가장 먼저 봐야 할 자료 중 하나다.
+
+전기 평가 당시의 당기 예측값과 당기 실제 실적을 비교한다.
+
+예:
+
+| 구분 | 전기 평가 당시 FY26 Forecast | FY26 Actual | 차이 |
+|---|---:|---:|---:|
+| 매출 | 1,000 | 650 | -350 |
+| EBIT | 100 | 20 | -80 |
+
+이 경우 단순히 당기 사업계획을 다시 받아서는 안 된다.
+
+다음과 같이 차이를 분해한다.
+
+### 외부요인
+
+- 경기침체
+- 환율
+- 원자재 가격
+- 규제
+- 산업수요 감소
+
+### 회사 고유요인
+
+- 수주 실패
+- 생산차질
+- 고객 이탈
+- 신제품 출시 지연
+- 인력 부족
+
+### Forecast Bias
+
+- 매년 공격적인 사업계획 수립
+- 실제 실적 미달 후 다음 해 다시 회복 가정
+- 근거 없이 Hockey-stick 회복
+
+반복적으로 전망이 실제를 초과한다면 경영진 전망의 신뢰성 자체가 중요한 감사증거가 된다.
+
+---
+
+# 6. Revenue Review Framework
+
+매출은 다음과 같이 분해한다.
+
+> **Market  
+> → Market Share  
+> → Volume  
+> → Price  
+> → Revenue**
+
+단순히 매출성장률만 보는 것은 의미가 작다.
+
+---
+
+# 7. Market
+
+검토사항:
+
+- 산업 자체가 성장하는가
+- 시장자료 출처는 신뢰할 수 있는가
+- 자료가 최신인가
+- 회사가 영위하는 세부 시장과 외부자료의 시장범위가 일치하는가
+- Value 기준 시장성장률인지 Volume 기준 성장률인지
+
+중요:
+
+> 시장금액 성장률을 그대로 판매량 증가율로 사용하면 안 된다.
+
+시장금액에는 가격효과와 Mix 효과가 포함될 수 있다.
+
+---
+
+# 8. Market Share
+
+시장이 10% 성장하는데 회사 매출이 100% 성장한다면 중요한 가정은 시장성장이 아니다.
+
+실질적으로는 점유율 상승이 핵심 가정이다.
+
+예:
+
+> 점유율 0.5% → 1.6% → 2.8% → 5.0%
+
+이 경우 감사질문은:
+
+- 경쟁사 대비 제품 우위가 무엇인가
+- 신규 유통망이 확보되었는가
+- 수주계약이 존재하는가
+- 고객 전환비용은 어떠한가
+- 경쟁사의 대응은 없는가
+- 생산능력이 가능한가
+
+가 된다.
+
+---
+
+# 9. Volume
+
+판매량 증가가 예상된다면 반드시 생산능력과 연결한다.
+
+> **Volume ↑  
+> → Capacity 확인  
+> → 인력 필요  
+> → CAPEX 필요  
+> → NWC 필요**
+
+판매량이 크게 증가하는데 위 네 가지가 변하지 않는다면 DCF 내부의 논리적 모순일 가능성이 높다.
+
+---
+
+# 10. Price
+
+판매단가 추정 시 확인사항:
+
+- 과거 단가 추세
+- 경쟁사 가격
+- 제품 Mix 변화
+- 물가상승률
+- 계약단가
+- 가격 전가 능력
+- 가격 인하 압력
+
+예를 들어:
+
+과거 판매량 확대를 위해 가격을 계속 낮춰왔다면 미래에 가격이 갑자기 고정 또는 상승하는 가정에는 별도의 근거가 필요하다.
+
+국가별 판매가격이 크게 다르면:
+
+- 제품 Spec
+- 관세
+- 물류
+- 환율
+- 유통구조
+- 판매채널
+
+등을 확인해야 한다.
+
+---
+
+# 11. Revenue Cross-check
+
+아래 구조로 확인하면 좋다.
+
+\[
+Revenue = Volume \times Price
+\]
+
+또는
+
+\[
+Revenue = Market Size \times Market Share
+\]
+
+두 접근법이 동시에 존재한다면 서로 Cross-check한다.
+
+---
+
+# 12. Cost / Margin
+
+매출성장만 반영하고 비용을 그대로 유지하는 것이 DCF의 흔한 오류다.
+
+비용은 크게 세 그룹으로 본다.
+
+### Variable Cost
+
+매출 또는 판매수량 연동
+
+예:
+
+- 원재료
+- 물류
+- 판매수수료
+- 포장비
+
+### Personnel Cost
+
+\[
+Headcount \times Salary
+\]
+
+### Fixed Cost
+
+과거 정상수준 및 물가상승률 등과 연동
+
+---
+
+# 13. 매출총이익률 / EBIT Margin
+
+Margin 개선이 있다면 원인을 구체적으로 확인해야 한다.
+
+예:
+
+- 제품 Mix 개선
+- 원재료 가격 하락
+- 가격 인상
+- 규모의 경제
+- 공정 자동화
+- 구조조정
+
+단순히:
+
+> “사업계획상 개선”
+
+이라는 설명만으로는 부족하다.
+
+---
+
+# 14. Cost Red Flags
+
+- 매출 3배 증가, 직원 동일
+- 생산량 증가, 생산인력 동일
+- 매출 증가, 물류비율 감소
+- 과거 가장 좋은 원가율을 Forecast에 적용
+- 일시적으로 좋았던 분기의 원가율을 장기 적용
+- 최근 가장 높은 부품매출 비율을 장기 적용
+- 실제 고정비인데 변동비처럼 추정
+
+---
+
+# 15. CAPEX / Capacity / Depreciation
+
+CAPEX는 매출과 반드시 연결해서 봐야 한다.
+
+## 핵심 논리
+
+> 매출 증가  
+> → 판매량 증가  
+> → 생산 Capacity 필요  
+> → CAPEX 필요 여부  
+> → 감가상각비 증가
+
+매출이 크게 증가하는데 CAPEX가 거의 없다면 기존 시설의 가동률과 여유 Capacity를 확인해야 한다.
+
+---
+
+# 16. Maintenance CAPEX와 Growth CAPEX
+
+장기 현금흐름에서는 회사가 현재 사업을 유지하기 위해 필요한 CAPEX가 중요하다.
+
+구분:
+
+### Maintenance CAPEX
+
+현재의 영업능력 유지
+
+### Growth CAPEX
+
+추가 생산능력 또는 성능 향상
+
+Terminal에서는 특히 Maintenance CAPEX의 정상수준이 중요하다.
+
+---
+
+# 17. VIU와 Future Improvement
+
+사용가치 평가에서는 미래 구조조정이나 자산의 성능개선과 관련된 미래현금흐름을 반영할 때 기준서상 제한이 존재한다.
+
+따라서 다음과 같은 모델은 특히 주의해야 한다.
+
+> 신규 공장 투자  
+> → 생산능력 2배  
+> → 매출 2배
+
+그 신규 공장 투자 및 성능향상이 평가기준일 현재 자산의 상태에 포함될 수 있는지 먼저 판단해야 한다.
+
+즉:
+
+> **VIU는 평가기준일 현재 자산의 상태와 일관되어야 한다.**
+
+---
+
+# 18. Depreciation
+
+Forecast 감가상각비는 다음과 연결되어야 한다.
+
+- 기존 자산 장부금액
+- 잔존내용연수
+- 신규 CAPEX
+- CAPEX 투입시점
+
+보고서상 P&L의 상각비와 별도 CAPEX/Dep schedule이 서로 일치하는지 확인한다.
+
+---
+
+# 19. Terminal CAPEX
+
+단순히:
+
+> Final Year Depreciation = Terminal CAPEX
+
+로 기계적으로 설정하면 안 된다.
+
+마지막 Forecast 기간에 대규모 투자가 있었다면 Final Year Dep는 일시적으로 높을 수 있다.
+
+Terminal에서 질문해야 하는 것은:
+
+> 회사를 정상적인 상태로 영구히 유지하기 위해 필요한 정상화된 재투자액은 얼마인가?
+
+이다.
+
+---
+
+# 20. NWC
+
+성장은 자금이 필요하다.
+
+매출 증가가 DCF에서 아무런 운전자본 부담 없이 발생하고 있다면 주의한다.
+
+주요 계정:
+
+- 매출채권
+- 재고자산
+- 매입채무
+
+---
+
+# 21. NWC Driver
+
+### AR
+
+\[
+AR \approx Revenue \times DSO / 365
+\]
+
+### Inventory
+
+\[
+Inventory \approx COGS \times Inventory\ Days / 365
+\]
+
+### AP
+
+\[
+AP \approx COGS \times DPO / 365
+\]
+
+회전기일을 임의로 개선하면 FCF가 크게 증가한다.
+
+따라서:
+
+- 과거 추세
+- 계약조건
+- 회사 정책
+- 실제 결제기일
+- 산업 benchmark
+
+를 확인한다.
+
+---
+
+# 22. Terminal Value의 본질
+
+DCF에서 가장 중요한 항목 중 하나다.
+
+질문은:
+
+> “Forecast 마지막 연도가 정말 영구적인 정상상태인가?”
+
+이다.
+
+일반적인 Gordon Growth 방식:
+
+\[
+TV =
+\frac{Normalized\ FCFF \times (1+g)}
+{WACC-g}
+\]
+
+핵심은 `Normalized FCFF`다.
+
+---
+
+# 23. Normalized Revenue
+
+마지막 연도가 다음과 같은 상태라면 그대로 TV에 사용해서는 안 될 수 있다.
+
+- 대형 일회성 수주
+- 신제품 Launch 직후
+- 공장 Ramp-up
+- 일시적 가격상승
+- 일시적 시장점유율 증가
+
+---
+
+# 24. Normalized Margin
+
+마지막 Forecast Margin이 다음 요인으로 비정상적으로 높다면 조정 검토가 필요하다.
+
+- 일시적 원재료 하락
+- 비용 절감 프로그램
+- 비정상적인 CAPEX 지연
+- 일회성 고수익 프로젝트
+
+---
+
+# 25. PGR
+
+PGR을 볼 때 중요한 것은 임의의 절대 숫자가 아니다.
+
+핵심은:
+
+> 장기적으로 지속가능한 성장률인가?
+
+확인 가능한 Benchmark:
+
+- 명목 GDP
+- CPI
+- 산업 장기성장률
+- 회사의 장기 매출성장률
+- 외부 전문기관 전망
+
+주의:
+
+> “PGR 1% 초과 시 문제”는 특정 리뷰 관행일 수 있으며, 이를 회계기준상 절대기준으로 이해해서는 안 된다.
+
+---
+
+# 26. WACC
+
+\[
+WACC
+=
+K_e \times \frac{E}{D+E}
++
+K_d(1-T) \times \frac{D}{D+E}
+\]
+
+WACC에서는 숫자 자체보다 가정 간 일관성이 중요하다.
+
+---
+
+# 27. Cost of Equity
+
+\[
+K_e =
+R_f + \beta \times MRP + \alpha
+\]
+
+주요 요소:
+
+- Risk-free Rate
+- Market Risk Premium
+- Beta
+- Specific Risk Premium
+
+---
+
+# 28. Risk-free Rate
+
+검토사항:
+
+- 통화
+- 만기
+- 평가기준일
+- Spot인지 평균인지
+- 적용 근거
+
+중요한 것은:
+
+> Cash Flow의 통화 및 인플레이션 가정과 할인율의 통화가 일치해야 한다.
+
+---
+
+# 29. Market Risk Premium
+
+검토사항:
+
+- Source
+- 기준일
+- Spot / 평균
+- 사용기간
+- 다른 WACC 요소와 동일한 시장기준인지
+
+특정 시점의 MRP 수치를 영구적인 기준으로 기억할 필요는 없다.
+
+---
+
+# 30. Peer Group
+
+Peer 선정은 WACC 검토의 핵심이다.
+
+확인:
+
+- 사업모델
+- 제품
+- 고객
+- 지역
+- 성장단계
+- 수익성
+- 재무구조
+
+같은 산업분류에 속한다는 이유만으로 Peer가 되는 것은 아니다.
+
+핵심 감사질문:
+
+> “왜 이 회사를 Peer로 포함했으며, 왜 다른 유사회사는 제외했는가?”
+
+---
+
+# 31. Beta
+
+Beta 관련 검토:
+
+- Raw / Adjusted
+- Weekly / Monthly
+- 측정기간
+- Outlier
+- Peer 평균 방식
+- De-lever / Re-lever
+
+어떤 방식이 항상 정답인 것은 아니다.
+
+감사인은 다음을 Challenge한다.
+
+> 왜 이 측정기간인가?  
+> 왜 이 frequency인가?  
+> 왜 이 평균방식인가?
+
+---
+
+# 32. Capital Structure
+
+Target capital structure는 단순히 평가대상회사의 현재 자본구조를 사용하는 것이 아니라 시장참여자 관점에서 검토한다.
+
+주로:
+
+- Peer capital structure
+- Industry average
+- 정상화된 장기 자본구조
+
+등을 고려한다.
+
+---
+
+# 33. Cost of Debt
+
+회사의 현재 차입이자율을 그대로 Kd로 사용하는 것은 주의한다.
+
+특히:
+
+- 단기차입
+- 담보부 차입
+- 특수관계자 차입
+- 정책금융
+- 비정상적으로 낮은 금리
+
+등은 장기 신용위험을 충분히 나타내지 않을 수 있다.
+
+핵심 질문:
+
+> 시장참여자가 이 회사의 장기 신용위험을 부담한다면 요구할 수익률은 얼마인가?
+
+---
+
+# 34. Specific Risk Premium
+
+Specific Risk Premium이 있으면:
+
+- 어떤 위험인가
+- Beta나 Cash Flow에 이미 반영된 위험은 아닌가
+- Double counting은 없는가
+- 객관적인 산출근거가 있는가
+
+를 확인한다.
+
+---
+
+# 35. 통화의 일관성
+
+매우 중요한 검토사항이다.
+
+예:
+
+USD Cash Flow에
+
+- KRW Risk-free Rate
+- KRW MRP
+- KRW Cost of Debt
+
+를 혼합하면 경제적 정합성이 깨질 수 있다.
+
+핵심은 기능통화라는 명칭 자체보다:
+
+> **Cash Flow에 반영된 통화·물가·시장 전제와 Discount Rate가 동일한 basis인가**
+
+이다.
+
+---
+
+# 36. IFRS 16 / Lease
+
+리스는 하나의 정답 공식을 외우기보다 일관성을 본다.
+
+핵심:
+
+> **Cash Flow 처리  
+> ↔ Enterprise Value  
+> ↔ Carrying Amount**
+
+리스부채를 Carrying Amount에서 조정하면서 동일 현금유출을 CF에서 이중으로 차감하지 않는지 확인한다.
+
+반대의 경우도 마찬가지다.
+
+---
+
+# 37. Carrying Amount
+
+평가보고서에서 산출한 회수가능액과 비교하는 장부금액의 범위가 매우 중요하다.
+
+FCFF 방식의 Enterprise Value라면 일반적으로 평가대상 영업사업과 관련된:
+
+- 영업자산
+- 영업부채
+- 관련 비유동자산
+
+등이 검토대상이 된다.
+
+다음은 별도 검토가 필요하다.
+
+- 현금
+- 금융자산
+- 관계기업
+- 비영업 투자자산
+- 이자부부채
+- 법인세자산·부채
+
+핵심은 특정 공식을 기계적으로 적용하는 것이 아니라:
+
+> **Recoverable Amount와 Carrying Amount의 Boundary를 일치시키는 것**
+
+이다.
+
+---
+
+# 38. Non-operating Assets
+
+DCF에서 영업가치와 비영업자산이 섞이는 것을 주의한다.
+
+예:
+
+- 투자부동산
+- 관계회사 지분
+- 유휴부동산
+- 금융상품
+
+이 자산들이 DCF Cash Flow에 포함되지 않는다면 별도 가치평가가 필요할 수 있다.
+
+---
+
+# 39. 외부평가인 / 경영진 전문가
+
+외부평가보고서가 있다고 해서 감사인의 책임이 이전되는 것은 아니다.
+
+검토사항:
+
+- 전문성
+- 역량
+- 독립성 또는 객관성
+- 사용 방법론
+- 주요 가정
+- 데이터의 출처
+
+계정담당자는 평가전문가를 사용하더라도 재무제표 감사결론에 대한 책임을 유지한다.
+
+---
+
+# 40. 외부자료
+
+외부자료를 사용할 때는 단순히 보고서에 Source가 적혀 있다는 이유로 수용하지 않는다.
+
+확인:
+
+- 출처 신뢰성
+- 작성일
+- 시장 정의
+- 지역
+- Forecast period
+- Value vs Volume
+- 회사의 사업범위와 일치 여부
+
+Outdated market report는 특히 주의한다.
+
+---
+
+# 41. 사업계획 승인
+
+DCF의 기초가 되는 사업계획이 실제 경영진이 승인한 계획인지 확인한다.
+
+필요한 증거 예:
+
+- 이사회 자료
+- 경영회의 자료
+- 공식 사업계획
+- 예산
+- 대표이사 또는 사업책임자 승인
+
+평가를 위해 별도로 만든 공격적인 계획인지 구분해야 한다.
+
+---
+
+# 42. 경영자확인서
+
+사업계획이 평가의 핵심 가정이라면 특정 중요 가정에 대해 경영진 확인이 보조증거가 될 수 있다.
+
+다만 경영자확인서는 독립적 감사증거를 대체하지 않는다.
+
+---
+
+# 43. Top-down Review
+
+Top-down에서는 먼저 시장 전체에서 회사로 내려온다.
+
+> Market Size  
+> → Market Growth  
+> → Market Share  
+> → Company Volume  
+> → Price  
+> → Revenue
+
+주요 Red Flag:
+
+- 산업성장률보다 압도적으로 높은 회사성장
+- 점유율 급상승
+- 시장가격과 회사가격 차이
+- 시장금액 성장률을 판매량 성장률로 직접 적용
+- 오래된 산업보고서 사용
+
+---
+
+# 44. Bottom-up Review
+
+Bottom-up에서는 회사의 세부 Driver부터 쌓아올린다.
+
+### Revenue
+
+\[
+Volume \times Price
+\]
+
+### Personnel Expense
+
+\[
+Headcount \times Salary
+\]
+
+### Variable Cost
+
+\[
+Revenue \times Variable\ Cost\ Ratio
+\]
+
+### Fixed Cost
+
+\[
+Prior\ Cost \times Inflation
+\]
+
+### NWC
+
+Turnover Day 기반
+
+각 Driver의 독립적인 합리성을 검토한다.
+
+---
+
+# 45. 제약·바이오 사례에서 볼 것
+
+- 질환별 시장규모
+- 환자수
+- 약가
+- 예정 약가인하
+- 경쟁약 출시
+- 계약만료
+- 신약 승인 가능성
+- 생산설비 CAPA
+- 시장점유율
+
+제약산업은 단순 CAGR보다 제품별 Lifecycle 검토가 중요하다.
+
+---
+
+# 46. 제조업 사례에서 볼 것
+
+- 수주잔고
+- 생산능력
+- 가동률
+- 주요 고객
+- 원재료 가격
+- 판매단가 전가 능력
+- 생산인력
+- 설비투자
+
+---
+
+# 47. 사양산업
+
+산업 자체가 감소하는데 회사 매출이 증가한다면 반드시 설명이 필요하다.
+
+가능한 설명:
+
+- 경쟁사 철수
+- 점유율 확대
+- 구조적 공급감소
+- 신규 수주
+- 고부가 제품 Mix
+
+근거가 없으면 성장 Forecast의 신뢰성이 낮다.
+
+---
+
+# 48. Sensitivity
+
+민감도 분석은 단순 보고서 장표가 아니다.
+
+감사에서는 다음을 본다.
+
+- WACC 변화
+- PGR 변화
+- 매출성장률
+- Margin
+- Terminal assumptions
+
+그리고 민감도 결과를 중요성과 연결한다.
+
+예:
+
+> WACC +0.5%만으로 손상 발생
+
+이라면 headroom이 매우 낮고 감사위험이 높다는 의미다.
+
+---
+
+# 49. Headroom
+
+\[
+Headroom =
+Recoverable\ Amount - Carrying\ Amount
+\]
+
+Headroom이 Materiality 대비 얼마나 되는지 검토한다.
+
+단순히 양수라는 이유로 손상 없음으로 결론 내리면 안 된다.
+
+---
+
+# 50. Disclosure Tie-out
+
+최종적으로 다음을 확인한다.
+
+- 재무제표 주석
+- 평가보고서
+- 감사조서
+- 회사 사업계획
+
+간 숫자와 가정이 일치하는가.
+
+확인:
+
+- Carrying Amount
+- Recoverable Amount
+- WACC
+- PGR
+- Forecast period
+- Sensitivity
+
+---
+
+# 51. Review Red Flag Checklist
+
+## 평가범위
+
+- [ ] CGU가 적절한가
+- [ ] 전기와 일관적인가
+- [ ] Carrying Amount 범위가 Recoverable Amount와 맞는가
+- [ ] 비영업자산이 섞이지 않았는가
+
+## Forecast
+
+- [ ] 전기 Forecast와 Actual을 비교했는가
+- [ ] 반복적인 Forecast miss가 있는가
+
+## Revenue
+
+- [ ] Market 근거가 있는가
+- [ ] Share 상승 근거가 있는가
+- [ ] Volume 증가가 가능한가
+- [ ] Price 가정이 과거와 일관적인가
+
+## Cost
+
+- [ ] 성장에 필요한 인력이 반영됐는가
+- [ ] 원가율 개선 근거가 있는가
+- [ ] 고정비가 정상화됐는가
+
+## CAPEX
+
+- [ ] 생산 Capacity가 충분한가
+- [ ] Growth CAPEX가 필요한가
+- [ ] 신규 CAPEX가 Dep와 연결되는가
+
+## NWC
+
+- [ ] AR 증가가 반영되는가
+- [ ] Inventory 증가가 반영되는가
+- [ ] AP 가정이 합리적인가
+
+## Terminal
+
+- [ ] 마지막 연도가 정상상태인가
+- [ ] Margin이 정상화됐는가
+- [ ] CAPEX가 정상화됐는가
+- [ ] PGR이 지속가능한가
+
+## WACC
+
+- [ ] Peer가 적절한가
+- [ ] Beta 기간과 방식의 근거가 있는가
+- [ ] Currency가 일치하는가
+- [ ] Kd가 회사 신용위험을 반영하는가
+- [ ] Specific Risk Premium이 중복되지 않는가
+
+## 기타
+
+- [ ] Lease 처리 일관성이 있는가
+- [ ] 사업계획이 승인된 자료인가
+- [ ] 외부자료가 최신인가
+- [ ] 전문가 역량을 평가했는가
+- [ ] Sensitivity가 충분한가
+
+---
+
+# 52. 회사/평가인에게 던질 핵심 질문
+
+1. 전기 사업계획과 실제실적 차이의 주요 원인은 무엇입니까?
+2. 당기 사업계획에는 그 차이가 어떻게 반영되었습니까?
+3. 시장성장률보다 회사 성장률이 높은 이유는 무엇입니까?
+4. 시장점유율 상승을 뒷받침하는 계약 또는 객관적 근거가 있습니까?
+5. Forecast 판매량을 현재 생산시설에서 생산할 수 있습니까?
+6. 추가 인력이나 설비투자가 필요하지 않습니까?
+7. 판매가격 상승 가정은 어떤 근거입니까?
+8. 원가율 개선은 구체적으로 무엇 때문입니까?
+9. 매출 증가에 따른 NWC 증가는 어떻게 반영됐습니까?
+10. Terminal Year가 정상상태라고 판단한 근거는 무엇입니까?
+11. Terminal CAPEX는 Maintenance CAPEX를 어떻게 반영했습니까?
+12. PGR은 어떤 시장자료와 비교했습니까?
+13. Peer 선정기준은 무엇입니까?
+14. 제외된 Peer의 제외사유는 무엇입니까?
+15. Beta 측정기간을 선정한 근거는 무엇입니까?
+16. Cost of Debt가 회사의 장기 신용위험을 대표하는 이유는 무엇입니까?
+17. Cash Flow와 할인율의 통화기준은 어떻게 일치시켰습니까?
+18. 리스부채 및 리스현금흐름은 DCF와 Carrying Amount에 각각 어떻게 반영했습니까?
+19. 비영업자산과 부채는 어떻게 구분했습니까?
+20. 주요 외부자료의 기준일과 자료작성일은 언제입니까?
+
+---
+
+# 53. 감사조서 작성 Framework
+
+실제 조서는 아래 구조로 작성하면 좋다.
+
+## 1. Issue
+
+손상징후 및 평가 필요성
+
+## 2. Relevant Accounting Requirement
+
+평가단위, 회수가능액, 현금흐름 및 주요가정
+
+## 3. Management Position
+
+회사의 DCF 방법론 및 결론
+
+## 4. Key Assumptions
+
+- Revenue
+- Margin
+- CAPEX
+- NWC
+- WACC
+- PGR
+
+## 5. Auditor Challenge
+
+가정별 Challenge
+
+## 6. Audit Evidence
+
+- 사업계획
+- 외부시장자료
+- 계약
+- 수주
+- 생산 Capacity
+- Bloomberg 등 시장자료
+- 실제 실적
+
+## 7. Recalculation / Cross-check
+
+## 8. Sensitivity
+
+## 9. Conclusion
+
+---
+
+# 54. 2020년 사례자료를 사용할 때 주의할 점
+
+과거 내부교육자료에는 매우 유용한 리뷰사례가 많지만 다음을 구분해야 한다.
+
+### 현재도 유효한 일반원칙
+
+- Forecast Back-testing
+- Market / Share / Volume / Price decomposition
+- Capacity / CAPEX 연결
+- NWC 재투자
+- Terminal normalization
+- Peer Challenge
+- Cash Flow와 할인율 일관성
+
+### 당시 내부 실무관행
+
+- 특정 PGR review threshold
+- 특정 Beta 기간
+- 특정 회사채 만기
+- 특정 데이터 source 관행
+
+### 시점 의존적인 수치
+
+- Rf
+- MRP
+- 회사채 수익률
+- Size Premium
+- 세율
+
+따라서 숫자를 외우지 말고 **리뷰 논리**를 기억해야 한다.
+
+---
+
+# 55. 핵심 연결관계
+
+DCF를 검토할 때 아래 연결관계를 반복적으로 확인한다.
+
+```text id="avqtgu"
+Market
+  ↓
+Market Share
+  ↓
+Volume
+  ↓
+Capacity
+  ↓
+Headcount / CAPEX
+  ↓
+Cost / Depreciation
+  ↓
+NWC
+  ↓
+FCFF
+  ↓
+Terminal Normalization
+  ↓
+WACC
+  ↓
+Recoverable Amount
+  ↓
+Carrying Amount
+```
+
+어느 한 곳에서 모순이 생기면 그 가정부터 다시 Challenge한다.
+
+---
+
+# 56. 반드시 기억할 7개 식
+
+\[
+Revenue = Volume \times Price
+\]
+
+\[
+Revenue = Market Size \times Market Share
+\]
+
+\[
+Personnel\ Cost = Headcount \times Salary
+\]
+
+\[
+FCFF = NOPLAT + D\&A - CAPEX - \Delta NWC
+\]
+
+\[
+TV =
+\frac{Normalized\ FCFF(1+g)}
+{WACC-g}
+\]
+
+\[
+WACC
+=
+K_e \frac{E}{D+E}
++
+K_d(1-T)\frac{D}{D+E}
+\]
+
+\[
+Headroom =
+Recoverable\ Amount - Carrying\ Amount
+\]
+
+---
+
+# 57. 최종 암기 문장
+
+> **DCF Review의 핵심은 할인율을 검산하는 것이 아니라, 평가가치가 만들어지는 경제적 스토리를 Driver 단위로 분해한 뒤 각 가정이 과거 실적·시장자료·생산능력·재투자·회계기준과 서로 일관되는지를 검증하는 것이다.**
+
+그리고 가장 강력한 감사질문은 결국 다음이다.
+
+> **“이 성장과 이 Margin을 실제로 달성하려면 무엇이 추가로 필요하며, 그것이 DCF에 전부 반영되어 있는가?”**
+
+이 버전은 **학습용 정본**으로 두고, 별도로 원자료 페이지와 1:1 연결되는 `source index`만 붙이면 장기적으로 가장 쓰기 좋은 구조입니다.

@@ -1,0 +1,40 @@
+# 감시 대상 YouTube 채널
+#
+# 새 채널을 추가할 때 Python 코드는 건드리지 않는다. 이 파일만 고치면 된다.
+# 이 파일은 스크립트가 다시 쓰지 않는다(주석·서식 보존).
+# 해석된 channel_id 캐시는 state/resolved_channels.json 에 별도 저장된다.
+
+defaults:
+  # transcript 타임스탬프 표기
+  #   line   — 타임스탬프를 별도 행으로 (기본. 기존 raw 28건과 동일한 형태)
+  #   prefix — 각 행 앞에 [M:SS]
+  #   none   — 제거
+  timestamp_style: line
+
+  # 이 길이 미만 영상은 건너뛴다 (Shorts 배제). 0 = 제한 없음
+  min_duration_sec: 120
+
+channels:
+  - name: 세무법인다솔
+    # url 은 아래 형태 모두 지원한다:
+    #   https://www.youtube.com/@handle
+    #   https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx
+    #   https://www.youtube.com/c/CustomName
+    # 채널명 '다솔세무TV'. 기존 raw 28건이 이 채널 영상임을 제목 대조로 확인했다.
+    url: "https://www.youtube.com/channel/UC3VsUfQ8gbdVgJ2Ernv-vvg"
+    category: 세무자문
+
+    # 수집한 transcript를 저장할 경로 (저장소 루트 기준).
+    # ★ 기존 수동 수집 컬렉션에 이어서 누적한다 — 새 폴더를 만들지 않는다.
+    #   (이 폴더의 기존 .txt 28건과 동일한 지식 컬렉션이며,
+    #    wiki/sources/세무법인다솔 유튜브 스터디/ 와 1:1 대응한다)
+    raw_dir: "raw/세무법인다솔 유튜브 스터디"
+
+    enabled: true
+
+  # 예시 — 새 채널은 이렇게 추가한다 (자체 컬렉션 폴더를 갖는다)
+  # - name: example-channel
+  #   url: "https://www.youtube.com/@example"
+  #   category: 재무자문
+  #   raw_dir: "raw/example-channel 유튜브 스터디"
+  #   enabled: false

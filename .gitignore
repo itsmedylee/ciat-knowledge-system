@@ -5,3 +5,17 @@
 # OS/임시
 Thumbs.db
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# 자동 수집 (automation/youtube)
+automation/youtube/logs/
+automation/youtube/state/*.corrupt-*.json
+.*.tmp
+
+# 인증정보 — 절대 커밋하지 않는다
+.env
+*.env
+cookies*.txt

@@ -1,0 +1,1206 @@
+이 자료는 100페이지 가까운 내용을 순서대로 외우는 방식보다, **“외부평가보고서를 감사인이 어떻게 깨뜨려 보느냐”라는 하나의 프레임**으로 다시 구성해서 학습하는 게 훨씬 효율적입니다.
+
+특히 이 자료에는 세 종류의 내용이 섞여 있습니다.
+
+1. **기준서에서 직접 나오는 원칙**
+2. **가치평가 이론**
+3. **2020년 당시 Deloitte VS 실무지침·관행**
+
+이 셋을 분리해서 익혀야 합니다. 예를 들어 “국내 영구성장률 0~2%”, “BBB- 회사채 수익률”, “Bloomberg ERP”, “5년 Monthly beta” 같은 것은 **영구불변의 K-IFRS 요구사항이 아닙니다.** 반면 “현금흐름과 할인율의 일관성”, “시장참여자 관점”, “VIU에서 승인된 예산에 기초”, “영구가치의 정상화” 같은 것은 훨씬 근본적인 원칙입니다.
+
+---
+
+# 1. 이 자료 전체를 관통하는 5개의 질문
+
+외부평가보고서를 받으면 사실 이것만 계속 물어보면 됩니다.
+
+> **① 무엇을 평가하고 있는가?**  
+> **② 어떤 현금흐름을 평가하고 있는가?**  
+> **③ 그 현금흐름의 위험을 할인율과 일관되게 반영했는가?**  
+> **④ 미래추정이 현실적으로 가능한가?**  
+> **⑤ 다른 시장정보와 비교했을 때 결과가 말이 되는가?**
+
+이게 이 70여 페이지 자료의 뼈대입니다.
+
+---
+
+# 2. 가장 먼저 잡아야 할 구조: “무엇을 평가하는가”
+
+가치평가에서 가장 흔한 오류 중 하나가 숫자를 잘못 계산하는 게 아니라 **평가대상을 잘못 정의하는 것**입니다.
+
+## A. Enterprise Value를 평가하는 경우
+
+FCFF를 사용합니다.
+
+\[
+FCFF = NOPLAT + D\&A - CAPEX - \Delta NWC
+\]
+
+그리고 할인율은:
+
+\[
+WACC
+\]
+
+입니다.
+
+따라서:
+
+\[
+Operating\ Value = PV(FCFF)
+\]
+
+그 다음:
+
+\[
+Equity\ Value
+=
+Operating\ Value
++ NonOperating\ Assets
+- Net\ Debt
+- Minority\ Interest
+\]
+
+같은 bridge를 거칩니다.
+
+---
+
+## B. Equity Value를 직접 평가하는 경우
+
+FCFE를 사용하고,
+
+\[
+Ke
+\]
+
+로 할인합니다.
+
+대표적인 적용 대상이 금융회사입니다.
+
+---
+
+## 핵심 암기
+
+이건 거의 반사적으로 나와야 합니다.
+
+| 현금흐름 | 평가대상 | 할인율 |
+|---|---|---|
+| FCFF | Enterprise/Operating Value | WACC |
+| FCFE | Equity Value | Cost of Equity |
+| 배당 | Equity Value | Cost of Equity |
+
+그래서 자료의 오류 사례 중
+
+> FCFE를 WACC로 할인
+
+하는 것은 단순 계산오류가 아니라 **valuation architecture 자체가 틀린 것**입니다.
+
+---
+
+# 3. DCF를 보는 가장 중요한 사고방식
+
+DCF는 복잡한 Excel 모델이 아닙니다.
+
+본질은:
+
+\[
+Value
+=
+\sum PV(Future\ Economic\ Benefits)
+\]
+
+입니다.
+
+그런데 여기서 가치가 흔들리는 지점은 대부분 네 가지입니다.
+
+> **Revenue → Margin → Reinvestment → Discount rate**
+
+즉,
+
+### ① 얼마나 팔 것인가
+Revenue
+
+### ② 얼마나 남길 것인가
+EBIT / Margin
+
+### ③ 그 성장을 위해 얼마나 투자해야 하는가
+CAPEX / Working Capital
+
+### ④ 그 현금흐름이 얼마나 위험한가
+WACC
+
+입니다.
+
+감사인이 DCF를 검토할 때 Excel formula를 100개 검토하는 것보다 이 네 축을 제대로 잡는 것이 훨씬 중요합니다.
+
+---
+
+# 4. 매출추정은 DCF의 출발점
+
+자료에서 굉장히 중요한 부분입니다.
+
+매출은 크게 두 방식으로 봅니다.
+
+## Top-down
+
+\[
+Revenue = Market\ Size \times Market\ Share
+\]
+
+예:
+
+시장 1조원 × 점유율 10% = 매출 1,000억원
+
+검토 포인트는:
+
+- 시장 규모 전망의 source
+- 금액 기준인지 수량 기준인지
+- 시장점유율 유지 가능한지
+- 신규 경쟁자 진입 여부
+- CAPA가 점유율 목표를 감당하는지
+
+입니다.
+
+---
+
+## Bottom-up
+
+\[
+Revenue = Quantity \times Price
+\]
+
+따라서 각각 따로 봅니다.
+
+### Quantity
+- 시장 성장률
+- 고객 수
+- 생산 CAPA
+- 수주잔고
+- 신규 고객
+
+### Price
+- ASP
+- 원재료 가격
+- 경쟁강도
+- 물가
+- 과거 가격 추이
+
+---
+
+## 감사인이 가장 경계해야 하는 것
+
+예를 들어 회사가:
+
+2026년 매출 100  
+2027년 130  
+2028년 180  
+2029년 250  
+2030년 350
+
+이라고 제출하면,
+
+단순히 CAGR 계산하는 게 아니라:
+
+> **“도대체 무엇이 100 → 350을 만드는가?”**
+
+를 분해해야 합니다.
+
+시장 성장인가?
+
+점유율 상승인가?
+
+가격 인상인가?
+
+신규제품인가?
+
+CAPA 증설인가?
+
+각 driver가 확인되지 않으면 **의지치(management aspiration)** 일 가능성이 큽니다.
+
+---
+
+# 5. 가장 많이 놓치는 부분: 성장에는 돈이 든다
+
+이 자료에서 가장 중요한 valuation insight 중 하나입니다.
+
+회사가 성장한다고 해놓고,
+
+- CAPEX
+- 운전자본
+
+을 안 늘리면 valuation이 과대평가됩니다.
+
+예를 들어 매출이:
+
+100 → 150 → 200
+
+으로 성장하면서,
+
+설비도 그대로  
+재고도 그대로  
+매출채권도 그대로
+
+라면 상당히 이상합니다.
+
+그래서 항상 묻습니다.
+
+> **“이 매출을 만들기 위한 재투자는 어디에 들어가 있는가?”**
+
+---
+
+# 6. Working Capital을 보는 법
+
+대표적으로:
+
+### 매출채권
+
+\[
+AR Days =
+\frac{AR}{Revenue}\times365
+\]
+
+### 재고
+
+\[
+Inventory Days =
+\frac{Inventory}{COGS}\times365
+\]
+
+### 매입채무
+
+\[
+AP Days =
+\frac{AP}{COGS}\times365
+\]
+
+이를 이용해서 미래 NWC를 projection합니다.
+
+---
+
+## 중요한 포인트
+
+평가기준일 현재 회전일수를 무조건 쓰면 안 됩니다.
+
+예:
+
+6월 말 기준 재고가 성수기 대비해서 일시적으로 많이 쌓였다면,
+
+6월 말 Inventory Days를 향후 5년간 그대로 projection하는 것은 잘못될 수 있습니다.
+
+따라서:
+
+- 과거 평균
+- 최근 실적
+- 회사 정책
+- 경쟁사
+- 계절성
+
+을 같이 봅니다.
+
+---
+
+# 7. WACC는 외우기보다 구조로 이해해야 합니다
+
+공식:
+
+\[
+WACC =
+\frac{D}{D+E}Kd(1-t)
++
+\frac{E}{D+E}Ke
+\]
+
+여기서:
+
+\[
+Ke = R_f + \beta ERP
+\]
+
+필요하면:
+
+\[
++ Size\ Premium
++ Country\ Risk
++ CSRP
+\]
+
+등이 붙습니다.
+
+---
+
+# 8. WACC 검토는 “각 숫자가 맞냐”보다 “세계관이 일관되냐”
+
+이 자료의 매우 중요한 메시지입니다.
+
+예를 들어:
+
+현금흐름 = KRW
+
+인데
+
+할인율 = USD WACC
+
+이면 안 됩니다.
+
+또:
+
+FCFF = Nominal
+
+인데
+
+실질 할인율을 적용하면 안 됩니다.
+
+또:
+
+현금흐름에서는 특정 리스크를 이미 낮춰놓고
+
+WACC에도 risk premium을 넣으면
+
+**Double counting**입니다.
+
+---
+
+# 9. Beta의 논리를 제대로 이해하면 WACC가 쉬워집니다
+
+비상장회사는 직접 beta를 관찰할 수 없습니다.
+
+그래서:
+
+> 유사회사 Levered β  
+> ↓  
+> Unlever  
+> ↓  
+> 평균  
+> ↓  
+> Target capital structure로 Relever
+
+합니다.
+
+Hamada:
+
+\[
+\beta_U
+=
+\frac{\beta_L}
+{1+(1-t)D/E}
+\]
+
+다시:
+
+\[
+\beta_L
+=
+\beta_U[1+(1-t)D/E]
+\]
+
+---
+
+## 왜 이 짓을 하는가?
+
+기업 A와 B가 똑같은 사업인데
+
+A는 부채 0  
+B는 부채가 엄청 많다면,
+
+B의 주식이 훨씬 위험합니다.
+
+따라서 관찰된 beta에는
+
+> Business risk + Financial leverage
+
+가 섞여 있습니다.
+
+우리가 원하는 것은 먼저:
+
+> **Business risk**
+
+를 분리하는 것입니다.
+
+그래서 unlever 합니다.
+
+---
+
+# 10. Comparable 선정이 Beta보다 중요할 수 있습니다
+
+beta 계산이 완벽해도 comparable이 틀리면 의미가 없습니다.
+
+가장 중요한 질문:
+
+> **“이 회사와 정말 같은 business risk를 가지고 있는가?”**
+
+입니다.
+
+단순히 KSIC가 같다고 comparable인 것이 아닙니다.
+
+예:
+
+자동차부품이라고 해도
+
+- OEM vs aftermarket
+- ICE vs EV
+- Tier 1 vs Tier 3
+- 고객 집중도
+- 해외 비중
+- 제품 lifecycle
+
+이 다르면 risk가 다릅니다.
+
+---
+
+# 11. Cost of Debt의 핵심
+
+가장 흔한 오류:
+
+> 회사 현재 차입금 이자율 = Kd
+
+라고 보는 것입니다.
+
+공정가치 측정이라면 본질적으로:
+
+> **측정일 현재 시장참여자가 요구할 조달금리**
+
+가 중요합니다.
+
+따라서:
+
+- 최근 차입금리
+- Marginal borrowing rate
+- 회사 신용등급
+- Comparable debt yield
+- 신용등급별 회사채 yield
+
+등을 봅니다.
+
+그리고 기본적인 sanity check:
+
+\[
+Kd \ge R_f
+\]
+
+정상적인 신용위험이 있는 회사라면 Kd가 Rf보다 낮은 것은 매우 이상합니다.
+
+---
+
+# 12. Terminal Value는 DCF의 가장 위험한 구간
+
+DCF 가치:
+
+\[
+EV =
+Explicit\ Period
++
+Terminal\ Value
+\]
+
+실무에서는 TV가 전체 가치의 상당 부분을 차지합니다.
+
+공식:
+
+\[
+TV
+=
+\frac{FCF_{n+1}}{WACC-g}
+\]
+
+따라서:
+
+- WACC
+- g
+- normalized FCF
+
+에 엄청 민감합니다.
+
+---
+
+# 13. 영구가치에서 가장 중요한 건 g가 아니라 Normalization
+
+많은 사람이:
+
+> “영구성장률 몇 % 썼습니까?”
+
+만 물어봅니다.
+
+하지만 더 중요한 질문은:
+
+> **“Terminal year의 FCF가 정상 상태인가?”**
+
+입니다.
+
+예를 들어 5년차에 공장 증설이 끝나면서 CAPEX가 500억 발생했습니다.
+
+그 500억을 그대로 terminal FCF에 넣으면 가치가 크게 왜곡됩니다.
+
+반대로 5년차 CAPEX가 우연히 0이라 해서 영원히 CAPEX 0으로 놓아도 안 됩니다.
+
+따라서:
+
+> **steady-state economics**
+
+를 만들어야 합니다.
+
+---
+
+# 14. 영구가치 정상화의 세 요소
+
+자료에서는:
+
+### NOPLAT
+
+\[
+NOPLAT_{n+1}
+=
+NOPLAT_n(1+g)
+\]
+
+### CAPEX
+
+일반적으로 steady state에서는
+
+\[
+CAPEX \approx D\&A
+\]
+
+라고 보는 경우가 많습니다.
+
+다만 무조건적인 규칙은 아닙니다.
+
+---
+
+### Working Capital
+
+이게 중요합니다.
+
+예:
+
+매출 1,100  
+영구성장률 3%  
+NWC/Revenue 30%
+
+이면:
+
+\[
+\Delta NWC
+=
+1,100\times3\%\times30\%
+=9.9
+\]
+
+입니다.
+
+5년차 ΔNWC가 30이라고 해서:
+
+\[
+30\times1.03
+\]
+
+으로 하면 안 됩니다.
+
+왜냐하면 5년차 성장률과 영구 성장률이 다르기 때문입니다.
+
+---
+
+# 15. 여기서 매우 중요한 valuation identity가 나옵니다
+
+장기적으로:
+
+\[
+g = ROIC \times Reinvestment\ Rate
+\]
+
+즉,
+
+> **성장하려면 투자해야 한다.**
+
+예를 들어:
+
+ROIC = 10%  
+g = 3%
+
+이면
+
+\[
+Reinvestment\ Rate
+=
+\frac{3\%}{10\%}
+=30\%
+\]
+
+가 필요합니다.
+
+이 관계를 이해하면 terminal value를 훨씬 잘 볼 수 있습니다.
+
+---
+
+# 16. 영구성장률을 보는 제대로 된 방법
+
+“한국기업이라 1%”
+
+같은 접근보다 다음을 봐야 합니다.
+
+- Inflation
+- GDP
+- 산업 장기성장률
+- 회사 maturity
+- pricing power
+- volume growth
+- 경쟁구조
+
+그리고 반드시:
+
+\[
+g < WACC
+\]
+
+여야 합니다.
+
+더 근본적으로는:
+
+> **회사가 영원히 경제 전체보다 빠르게 성장할 수 있는가?**
+
+를 생각해야 합니다.
+
+대부분의 기업은 불가능합니다.
+
+---
+
+# 17. Impairment에서 가장 중요한 프레임
+
+IAS 36/K-IFRS 1036에서:
+
+\[
+Recoverable Amount
+=
+\max(VIU,\ FVLCD)
+\]
+
+입니다.
+
+따라서:
+
+\[
+Carrying Amount
+>
+Recoverable Amount
+\]
+
+이면 impairment.
+
+---
+
+# 18. VIU와 Fair Value는 같은 DCF여도 세계관이 다릅니다
+
+이건 정말 중요합니다.
+
+### VIU
+
+**Entity-specific**
+
+현재 상태에서 회사가 사용할 때 창출되는 가치.
+
+### Fair value
+
+**Market participant**
+
+시장참여자가 보는 가치.
+
+따라서 같은 Excel DCF라도 assumptions의 출발점이 다릅니다.
+
+---
+
+# 19. VIU의 가장 중요한 restriction
+
+자료에서도 반복됩니다.
+
+현금흐름은 원칙적으로:
+
+> **현재 자산 상태(current condition)**
+
+에 기반합니다.
+
+따라서 아직 확약되지 않은:
+
+- restructuring
+- 성능 향상
+- 대규모 CAPEX
+- 미래 원가절감
+
+을 함부로 넣으면 안 됩니다.
+
+---
+
+# 20. 별도 투자주식 impairment vs 연결 goodwill impairment
+
+이건 감사 실무에서 중요합니다.
+
+### 별도
+
+투자주식 carrying amount
+
+vs
+
+투자주식의 recoverable amount
+
+즉 대체로 **Equity Value** 관점.
+
+---
+
+### 연결
+
+Goodwill이 배부된 CGU carrying amount
+
+vs
+
+CGU recoverable amount
+
+즉 대체로 **Operating/Enterprise Value** 관점.
+
+그래서 같은 사업을 평가해도 비교대상 carrying amount가 다릅니다.
+
+---
+
+# 21. Carrying amount와 Recoverable amount는 반드시 사과 대 사과
+
+자료에서 아주 중요한 부분입니다.
+
+예를 들어 carrying amount에 운전자본을 포함했다면,
+
+DCF에도 그에 상응하는 경제적 효과가 들어가야 합니다.
+
+이걸 저는 다음 한 문장으로 외우는 것을 추천합니다.
+
+> **“Left side와 right side의 boundary가 같아야 한다.”**
+
+즉:
+
+\[
+Carrying\ Amount\ Boundary
+=
+DCF\ Boundary
+\]
+
+입니다.
+
+이게 안 맞으면 손상금액이 왜곡됩니다.
+
+---
+
+# 22. PPA는 구조를 먼저 이해해야 합니다
+
+사업결합:
+
+\[
+Purchase\ Price
+\]
+
+↓
+
+식별가능한:
+
+- 유형자산
+- 무형자산
+- 부채
+
+공정가치 평가
+
+↓
+
+잔액:
+
+\[
+Goodwill
+\]
+
+---
+
+# 23. 무형자산 평가 핵심 두 가지
+
+## 고객관계
+
+보통:
+
+### MPEEM
+
+다기간초과이익법.
+
+핵심:
+
+\[
+Value
+=
+PV(
+After-tax\ Earnings
+-
+CAC
+)
+\]
+
+여기서 CAC가 중요합니다.
+
+---
+
+## Brand / Trademark
+
+보통:
+
+### Relief-from-Royalty
+
+\[
+Revenue
+\times
+Royalty\ Rate
+\times
+(1-Tax)
+\]
+
+을 할인합니다.
+
+---
+
+# 24. CAC의 의미를 제대로 이해하면 MPEEM이 쉬워집니다
+
+고객관계 혼자 돈을 벌 수 있습니까?
+
+아닙니다.
+
+고객관계를 활용하려면:
+
+- Working capital
+- Factory
+- Workforce
+- Brand
+
+같은 다른 자산이 필요합니다.
+
+그러므로 그 자산에 대해서도:
+
+> “사용료”
+
+를 내는 것으로 가정합니다.
+
+그게:
+
+**Contributory Asset Charge**
+
+입니다.
+
+---
+
+# 25. PPA의 강력한 sanity check: IRR / WACC / WARA
+
+자료의 핵심:
+
+\[
+IRR \leftrightarrow WACC \leftrightarrow WARA
+\]
+
+입니다.
+
+### IRR
+
+Purchase Price와 business CF를 연결.
+
+### WACC
+
+회사의 자본비용.
+
+### WARA
+
+개별 자산의 요구수익률 가중평균.
+
+경제적으로 모두 같은 business를 설명하기 때문에 심하게 벌어지면 이상합니다.
+
+다만 **“1% 이내”는 IFRS rule이 아니라 당시 실무적 guideline에 가까운 표현**으로 이해하는 게 좋습니다.
+
+---
+
+# 26. Market Approach의 핵심
+
+시장접근법은 단순히 multiple × EBITDA가 아닙니다.
+
+본질은:
+
+> **동일한 경제적 대상 / 동일한 numerator / 동일한 denominator**
+
+입니다.
+
+예:
+
+\[
+EV/EBITDA
+\]
+
+이면 numerator는 Enterprise Value,
+
+denominator는 enterprise 전체에 귀속되는 EBITDA여야 합니다.
+
+---
+
+# 27. EV 계산
+
+기본적인 구조:
+
+\[
+EV =
+Market\ Cap
++ Debt
+- Cash
++ NCI
+\]
+
+상황에 따라:
+
+- 비영업자산
+- 관계기업
+- 투자주식
+
+등을 조정합니다.
+
+그리고 매우 중요:
+
+> Comparable EV 계산 논리와 Target EV 계산 논리가 같아야 합니다.
+
+---
+
+# 28. 시장접근법에서 가장 위험한 부분
+
+multiple 숫자보다 **Comparable 선정**입니다.
+
+확인:
+
+- business model
+- product
+- customer
+- geography
+- growth
+- margin
+- risk
+- capital intensity
+
+가 비슷한가?
+
+---
+
+# 29. Control Premium과 DLOM
+
+여기는 특히 2020년 자료를 그대로 외우면 위험합니다.
+
+개념만 잡는 것이 좋습니다.
+
+가치는 크게:
+
+> Listed minority  
+> ↓ control adjustment  
+> Control value  
+> ↓ liquidity/marketability adjustment  
+> Unlisted value
+
+식으로 달라질 수 있습니다.
+
+다만 DCF가 자동적으로 control value인지 minority value인지도 항상 정해져 있는 것이 아니라 **현금흐름 assumptions가 어떤 권리를 반영하는지**가 중요합니다.
+
+자료도 이 점을 일부 인정하고 있습니다.
+
+---
+
+# 30. 결국 외부평가보고서 리뷰는 이 10개만 보면 됩니다
+
+실무적으로는 아래 checklist를 머릿속에 넣어두면 됩니다.
+
+### ① Valuation object
+Equity인가? Enterprise인가? CGU인가? Intangible인가?
+
+### ② Valuation standard
+Fair Value인가? VIU인가? Transaction Value인가?
+
+### ③ Method
+DCF / GPC / GTC / Asset Approach 중 왜 이 방법인가?
+
+### ④ Business plan
+경영진 승인 자료인가?
+
+### ⑤ Revenue
+시장전망과 연결되는가?
+
+### ⑥ Margin
+과거·경쟁사와 비교 가능한가?
+
+### ⑦ Reinvestment
+CAPEX / NWC가 growth와 일관적인가?
+
+### ⑧ WACC
+CF와 통화·risk·tax basis가 일치하는가?
+
+### ⑨ Terminal Value
+Steady state가 제대로 만들어졌는가?
+
+### ⑩ Cross-check
+Multiple / transaction / prior valuation / purchase price와 비교했는가?
+
+---
+
+# 31. 감사인 입장에서 한 단계 더 중요한 프레임
+
+이 자료를 공부할 때 저는 다음 세 가지 레벨로 검토하는 것을 권합니다.
+
+### Level 1 — Mechanical
+
+산식이 맞는가?
+
+예:
+
+\[
+TV = FCF/(WACC-g)
+\]
+
+---
+
+### Level 2 — Internal Consistency
+
+모형 내부가 일관적인가?
+
+예:
+
+매출 +20%
+
+그런데 CAPEX 0  
+NWC 0
+
+→ 이상.
+
+---
+
+### Level 3 — External Consistency
+
+외부 현실과 일치하는가?
+
+예:
+
+시장 성장률 3%
+
+회사 성장률 25%
+
+→ 점유율이 엄청 올라야 함.
+
+왜?
+
+---
+
+실무에서 중요한 건 **Level 2와 Level 3**입니다.
+
+Level 1은 Excel 검산으로 잡을 수 있습니다.
+
+---
+
+# 32. 이 자료를 공부할 때 외우지 말아야 할 것
+
+2020년 당시 수치를 그대로 외우지 마세요.
+
+예를 들면:
+
+- 한국 ERP 몇 %
+- BBB- 회사채 yield
+- Size premium 몇 %
+- 한국 영구성장률 0~2%
+- 세율 22% / 24.2%
+- 특정 Bloomberg practice
+
+등입니다.
+
+시점에 따라 달라집니다.
+
+---
+
+# 33. 대신 반드시 외워야 할 것
+
+이 12개는 거의 몸에 익혀도 됩니다.
+
+> **1. FCFF → WACC → EV**  
+> **2. FCFE → Ke → Equity Value**  
+> **3. Growth에는 reinvestment가 필요하다.**  
+> **4. CF risk와 discount rate risk는 일관되어야 한다.**  
+> **5. Fair Value는 market participant 관점이다.**  
+> **6. VIU는 current condition에 기반한다.**  
+> **7. Terminal CF는 normalized되어야 한다.**  
+> **8. Comparable selection이 beta/multiple 계산보다 중요하다.**  
+> **9. Carrying amount와 recoverable amount의 boundary가 같아야 한다.**  
+> **10. PPA에서는 IRR-WACC-WARA가 연결된다.**  
+> **11. MPEEM에서는 CAC가 핵심이다.**  
+> **12. DCF 결과는 반드시 market evidence와 cross-check한다.**
+
+---
+
+# 34. 제가 추천하는 공부 순서
+
+이 순서가 원본 페이지 순서보다 훨씬 낫습니다.
+
+### 1단계
+FCFF / FCFE / EV / Equity Value
+
+### 2단계
+Revenue → EBITDA → NOPLAT → FCF
+
+### 3단계
+CAPEX / Working Capital
+
+### 4단계
+WACC / CAPM / Beta / Capital Structure
+
+### 5단계
+Terminal Value
+
+### 6단계
+Market Approach
+
+### 7단계
+Impairment
+
+### 8단계
+PPA / MPEEM / RFRM / WARA
+
+순서입니다.
+
+PPA를 앞에서 배우면 오히려 복잡해집니다.
+
+---
+
+# 35. 마지막으로 실무형 문제 하나
+
+회사가 다음 DCF를 제출했다고 생각해 보세요.
+
+| | 2027 | 2028 | 2029 | 2030 | 2031 |
+|---|---:|---:|---:|---:|---:|
+| 매출 | 100 | 130 | 170 | 220 | 280 |
+| EBIT Margin | 5% | 8% | 12% | 15% | 18% |
+| CAPEX | 3 | 3 | 3 | 3 | 3 |
+| ΔNWC | 0 | 0 | 0 | 0 | 0 |
+
+WACC 8%  
+Terminal g 3%
+
+라면 초보자는 WACC 8%가 맞는지부터 봅니다.
+
+하지만 숙련된 리뷰어라면 가장 먼저:
+
+> **“매출은 5년에 2.8배, margin은 5%→18%인데 왜 CAPEX와 운전자본 투자가 거의 없습니까?”**
+
+를 묻습니다.
+
+그 다음:
+
+> 시장이 그만큼 성장합니까?
+
+> 점유율 상승 근거가 있습니까?
+
+> 경쟁사 margin은 얼마입니까?
+
+> 18% margin이 steady state입니까?
+
+> Terminal value에 들어가는 2032년 CF는 정상화되어 있습니까?
+
+를 묻습니다.
+
+이게 **valuation report를 제대로 검토하는 사고방식**입니다.
+
+---
+
+원한다면 다음 단계에서는 이 자료를 기반으로 **「외부평가보고서 검토 실무 WIKI」 형태로 ① DCF ② WACC ③ Terminal Value ④ Impairment ⑤ PPA ⑥ Market Approach별로 각각 한 페이지씩 완전한 학습노트로 만들어서**, 앞으로 실제 평가보고서를 받을 때 그대로 체크리스트처럼 사용할 수 있도록 구성하는 게 가장 좋습니다.

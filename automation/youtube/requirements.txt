@@ -1,0 +1,4 @@
+# 최소 의존성. 나머지는 Python 표준 라이브러리로 처리한다.
+# (RSS 파싱 = xml.etree, HTTP = urllib, 상태 = json, 로그 = logging)
+yt-dlp>=2025.1.1
+PyYAML>=6.0
