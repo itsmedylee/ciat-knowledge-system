@@ -32,6 +32,15 @@ channels:
 
     enabled: true
 
+  - name: 로뎀세무법인
+    url: "https://www.youtube.com/@rodemtax"
+    category: 세무자문
+
+    # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
+    raw_dir: "raw/로뎀세무법인 유튜브 스터디"
+
+    enabled: true
+
   # 예시 — 새 채널은 이렇게 추가한다 (자체 컬렉션 폴더를 갖는다)
   # - name: example-channel
   #   url: "https://www.youtube.com/@example"
