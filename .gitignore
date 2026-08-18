@@ -1,5 +1,6 @@
 # 도구/로컬 설정 (콘텐츠 아님)
 .claude/
+.codex/
 .obsidian/
 
 # OS/임시
