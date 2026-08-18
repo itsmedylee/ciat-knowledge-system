@@ -1,8 +1,8 @@
 ---
-title: 부록: 추가로 필요한 자료 목록
+title: "부록: 추가로 필요한 자료 목록"
 type: topic
 created: 2026-08-09
-updated: 2026-08-10
+updated: 2026-08-15
 domain: 회계
 tags: [현금흐름표, 은행, 아카이브, 특정분기종속]
 sources: [은행_현금흐름표_작성_실무가이드]
