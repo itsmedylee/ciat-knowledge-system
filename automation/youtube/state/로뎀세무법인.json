@@ -318,6 +318,49 @@
       "file": "raw/로뎀세무법인 유튜브 스터디/2022-07-08-사업자자동차, 업무용승용차 리스, 렌트, 할부, 일시불 대체 어떻게 구매해야 하나요 세무사가 직접 사업용 차량구매의 해답을 알려드립니다.md",
       "language": "ko",
       "transcript_source": "auto-caption"
+    },
+    "emmx4GLkf_U": {
+      "channel": "로뎀세무법인",
+      "title": "웹툰·웹소설 작가, 창업감면으로 소득세 아끼는 방법💸",
+      "published": "2026-08-13",
+      "status": "baseline",
+      "attempts": 0,
+      "first_seen": "2026-08-20T00:30:23+09:00",
+      "last_attempt": "2026-08-20T00:30:23+09:00",
+      "file": null
+    },
+    "IZSRjyAnWOw": {
+      "channel": "로뎀세무법인",
+      "title": "웹툰·웹소설 작가, 사업자 언제 내야 하나요?",
+      "published": "2026-08-13",
+      "status": "baseline",
+      "attempts": 0,
+      "first_seen": "2026-08-20T00:30:23+09:00",
+      "last_attempt": "2026-08-20T00:30:23+09:00",
+      "file": null
+    },
+    "PLPIO4sHeWA": {
+      "channel": "로뎀세무법인",
+      "title": "음식점 개업 절차와 절세를 위한 기본 세팅 방법",
+      "published": "2026-08-18",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-08-20T00:30:25+09:00",
+      "last_attempt": "2026-08-20T00:30:25+09:00",
+      "file": "raw/로뎀세무법인 유튜브 스터디/2026-08-18-음식점 개업 절차와 절세를 위한 기본 세팅 방법.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "B3X_FZdAq-E": {
+      "channel": "로뎀세무법인",
+      "title": "웹툰·웹소설 작가, 출판사 등록하고 이건 꼭 해야 세금 아낄 수 있어요!",
+      "published": "2026-08-14",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-20T00:30:26+09:00",
+      "last_attempt": "2026-08-20T00:30:26+09:00",
+      "file": null,
+      "last_error": "duration 64s"
     }
   }
 }
