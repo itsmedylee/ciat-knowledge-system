@@ -54,7 +54,7 @@ raw로 자료를 넣거나 외부 LLM에 질문을 던지기 전에, "무엇을 
 ## D. 구조·운영 (WIKI 자체 미결)
 | # | 과제 | 근거 | 우선 | 상태 |
 |---|---|---|---|---|
-| D1 | 소스요약 파일명 규칙 확정(`-소스요약` 접미사 + raw/automation vault 제외) — Obsidian 경로주입 재발 방지 | [[CLAUDE]] 2026-08-11 확정 | P2 | done |
+| D1 | 소스요약 파일명 규칙 확정(`-소스요약` 접미사 + raw/automation vault 제외) — Obsidian 경로주입 재발 방지 | `CLAUDE.md` 2026-08-11 확정 | P2 | done |
 | D2 | practice/회계감사(legacy 도메인축) → 프로세스 축 migration 계획 | 이번 구조변경 시 legacy 지정 | P3 | parked |
 
 ---
