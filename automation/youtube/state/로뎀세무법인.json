@@ -361,6 +361,17 @@
       "last_attempt": "2026-08-20T00:30:26+09:00",
       "file": null,
       "last_error": "duration 64s"
+    },
+    "fk6UhSQN3U4": {
+      "channel": "로뎀세무법인",
+      "title": "법인을 위한 로뎀 세무기장 라이트 출시⚡ 꼭 필요한 서비스만 쏙쏙 챙겨가세요!",
+      "published": "2026-08-20",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-21T22:36:38+09:00",
+      "last_attempt": "2026-08-21T22:36:38+09:00",
+      "file": null,
+      "last_error": "duration 42s"
     }
   }
 }

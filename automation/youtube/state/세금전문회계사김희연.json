@@ -1421,37 +1421,58 @@
       "channel": "세금전문회계사김희연",
       "title": "dFrSWG8Vb08",
       "published": "2026-08-20",
-      "status": "failed",
-      "attempts": 1,
+      "status": "skipped",
+      "attempts": 0,
       "first_seen": "2026-08-20T10:38:57+09:00",
-      "last_attempt": "2026-08-20T10:38:57+09:00",
+      "last_attempt": "2026-08-21T22:43:40+09:00",
       "file": null,
-      "next_retry_after": "2026-08-20T11:08:57+09:00",
-      "last_error": "ERROR: [youtube] dFrSWG8Vb08: 비공개 동영상. 이 동영상에 대한 액세스 권한이 있는 경우 로그인하세요."
+      "last_error": "비공개 영상 (로그인 필요) — 재시도 무의미"
     },
     "G6r5rQvTkBU": {
       "channel": "세금전문회계사김희연",
       "title": "G6r5rQvTkBU",
       "published": "2026-08-20",
-      "status": "failed",
-      "attempts": 1,
+      "status": "skipped",
+      "attempts": 0,
       "first_seen": "2026-08-20T10:38:58+09:00",
-      "last_attempt": "2026-08-20T10:38:58+09:00",
+      "last_attempt": "2026-08-21T22:43:40+09:00",
       "file": null,
-      "next_retry_after": "2026-08-20T11:08:58+09:00",
-      "last_error": "ERROR: [youtube] G6r5rQvTkBU: 비공개 동영상. 이 동영상에 대한 액세스 권한이 있는 경우 로그인하세요."
+      "last_error": "비공개 영상 (로그인 필요) — 재시도 무의미"
     },
     "5Z7LWbSXJkk": {
       "channel": "세금전문회계사김희연",
       "title": "5Z7LWbSXJkk",
       "published": "2026-08-20",
-      "status": "failed",
-      "attempts": 1,
+      "status": "skipped",
+      "attempts": 0,
       "first_seen": "2026-08-20T10:38:58+09:00",
-      "last_attempt": "2026-08-20T10:38:58+09:00",
+      "last_attempt": "2026-08-21T22:43:41+09:00",
       "file": null,
-      "next_retry_after": "2026-08-20T11:08:58+09:00",
-      "last_error": "ERROR: [youtube] 5Z7LWbSXJkk: 비공개 동영상. 이 동영상에 대한 액세스 권한이 있는 경우 로그인하세요."
+      "last_error": "비공개 영상 (로그인 필요) — 재시도 무의미"
+    },
+    "8DYprqa2YHM": {
+      "channel": "세금전문회계사김희연",
+      "title": "\"10년 뒤 대량 노후파산 시작됩니다\" 지금 한국에서 가장 위험한 의외의 세대ㅣ절세미녀X김경록 고문",
+      "published": "2026-08-21",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-08-21T22:36:39+09:00",
+      "last_attempt": "2026-08-21T22:36:39+09:00",
+      "file": "raw/유튜브 스터디/세금전문회계사 김희연 유튜브 스터디/2026-08-21-10년 뒤 대량 노후파산 시작됩니다 지금 한국에서 가장 위험한 의외의 세대ㅣ절세미녀X김경록 고문.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "JkMpy-YPuII": {
+      "channel": "세금전문회계사김희연",
+      "title": "40년 뒤 통장 잔고 10억 넘기는 적격 ETF 세팅법ㅣIRP 100% 굴리는 법 | 절세미녀",
+      "published": "2026-08-20",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-08-21T22:36:42+09:00",
+      "last_attempt": "2026-08-21T22:36:42+09:00",
+      "file": "raw/유튜브 스터디/세금전문회계사 김희연 유튜브 스터디/2026-08-20-40년 뒤 통장 잔고 10억 넘기는 적격 ETF 세팅법ㅣIRP 100% 굴리는 법 절세미녀.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
     }
   }
 }

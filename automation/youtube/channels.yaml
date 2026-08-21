@@ -30,7 +30,12 @@ channels:
     #    wiki/sources/세무법인다솔 유튜브 스터디/ 와 1:1 대응한다)
     raw_dir: "raw/유튜브 스터디/세무법인다솔 유튜브 스터디"
 
-    enabled: true
+    # ⚠️ 채널 전체 감시를 하지 않는다 (2026-08-21 사용자 지시).
+    # 이 채널은 필요한 영상·재생목록만 골라서 받는다. 신규 영상 자동 수집 대상이 아니다.
+    #   enabled: false 는 youtube_watcher.py 의 감시에서만 제외한다.
+    #   playlist_fetch.py 는 enabled 를 보지 않으므로 아래처럼 그대로 쓸 수 있다:
+    #     python automation/youtube/playlist_fetch.py --channel "세무법인다솔" --playlist-url "URL"
+    enabled: false
 
   - name: 로뎀세무법인
     url: "https://www.youtube.com/@rodemtax"
@@ -57,6 +62,16 @@ channels:
 
     # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
     raw_dir: "raw/유튜브 스터디/상속마스터 정변 유튜브 스터디"
+
+    enabled: true
+
+  - name: 택스인사이드
+    # 채널명 '택스인사이드'(이정근 세무사). 부동산세제·상속증여·양도세 중심.
+    url: "https://www.youtube.com/channel/UCWhpZsI4Zy8NkSKSgREF-3g"
+    category: 세무자문
+
+    # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
+    raw_dir: "raw/유튜브 스터디/택스인사이드 유튜브 스터디"
 
     enabled: true
 

@@ -134,7 +134,10 @@ def fetch_recent_via_ytdlp(channel_url: str, limit: int) -> list[FeedItem]:
     try:
         with YoutubeDL(
             {"quiet": True, "no_warnings": True, "skip_download": True,
-             "extract_flat": "in_playlist", "playlistend": limit}
+             "extract_flat": "in_playlist", "playlistend": limit,
+             # 지정하지 않으면 YouTube가 제목을 자동 번역해서 준다
+             # (captions.py·playlist_fetch.py와 동일 조치)
+             "extractor_args": {"youtube": {"lang": ["ko"]}}}
         ) as ydl:
             info = ydl.extract_info(url, download=False)
     except DownloadError as exc:

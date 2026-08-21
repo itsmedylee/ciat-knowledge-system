@@ -21,7 +21,7 @@ from datetime import datetime
 from yt_dlp import YoutubeDL
 from yt_dlp.utils import DownloadError
 
-from ledger import Ledger
+from ledger import Ledger, now_kst
 from youtube_watcher import REPO_ROOT, STATE_DIR, load_config, log, process_video, setup_logging
 
 
@@ -99,6 +99,13 @@ def main() -> int:
         stats[status] = stats.get(status, 0) + 1
         if not args.dry_run:
             ledger.save()
+
+    # 재생목록 수집도 baseline 등록 분기를 거치지 않는다 — 채널 watcher 가 이후
+    # "최초 실행"으로 오인해 이력을 덮어쓰지 않도록 baseline_at 을 확정한다.
+    if not args.dry_run and ledger.baseline_at is None:
+        ledger.set_baseline(now_kst())
+        ledger.save()
+        log.info("[%s] baseline_at 확정 — 이후 일반 실행이 이력을 덮어쓰지 않는다", args.channel)
 
     summary = " · ".join(f"{k} {v}" for k, v in stats.items() if v)
     log.info("=== 완료: %s ===", summary or "변경 없음")

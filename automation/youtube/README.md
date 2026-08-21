@@ -117,10 +117,86 @@ channels:
 
 ---
 
-## Windows 작업 스케줄러 등록
+## 실행 주기
 
-무한 루프로 상주시키지 않는다. **1시간 간격으로 한 번 실행하고 종료**하는 방식이다.
-(30분은 과잉이다 — 자동자막 생성 지연을 고려하면 이득이 없고 rate limit 위험만 는다.)
+**기본은 수동 실행이다.** 필요할 때 `youtube_watcher.py` 를 직접 돌린다. 상주시키지도,
+잦은 주기로 자동 실행하지도 않는다.
+
+### 운영 방식 — "유튜브 업데이트해줘"
+
+사용자는 주기를 계산하지 않는다. **오래 안 돌렸다 싶으면 "유튜브 업데이트해줘" 라고만
+말한다.** 날짜 계산과 backfill 필요 여부 판정은 LLM이 `status.py` 로 처리한다.
+
+```powershell
+# 1) 먼저 상태를 본다 — 읽기 전용, 수집하지 않는다
+python automation/youtube/status.py
+
+# 2) status.py 가 출력한 "권장 실행" 을 그대로 돌린다
+```
+
+`status.py` 는 채널마다 **마지막 수집 영상의 게시일**과 **현재 RSS 창(최신 15건이 덮는
+기간)** 을 대조해 판정한다:
+
+| 판정 | 의미 | 조치 |
+|---|---|---|
+| `OK` | RSS 창이 마지막 수집분까지 덮는다 | 일반 실행 |
+| `BACKFILL` | 창 밖으로 밀려난 구간이 있다 | `--backfill N` 병행 |
+| `NEW` | 수집 이력이 없는 채널 | `--backfill` 로 시작 |
+| `OFF` | `enabled: false` — 채널 감시 대상이 아니다 | 조치 없음 (재생목록만 수동 수집) |
+
+판정 기준은 경과일이 아니라 **"RSS 창의 가장 오래된 영상이 마지막 수집분보다 뒤인가"**
+다. 경과일로 판단하면 업로드가 잦은 채널을 놓친다 — 같은 7일이라도 채널마다 15건이
+덮는 기간이 9일과 85일로 다르기 때문이다(아래 실측표).
+
+자동화가 필요해지면 **주 1회**로 등록한다. 그 이상 자주 돌릴 이유가 없다 — 수집한
+transcript는 어차피 수동 `/ingest` 를 거쳐야 지식이 되므로, 수집 주기를 가공 주기보다
+촘촘하게 잡아도 raw만 쌓일 뿐이다. rate limit 위험만 는다.
+
+### ⚠️ RSS 창은 최신 15건뿐이다
+
+`fetch_feed` 가 보는 RSS는 **최신 15건**만 반환하고, **Shorts도 이 15건에 포함된다.**
+실행 간격 동안 채널이 15건을 넘게 올리면 그 사이 영상은 창 밖으로 밀려나 **영구히
+수집되지 않는다.**
+
+2026-08-21 실측 — 각 채널의 RSS 15건이 덮는 기간:
+
+| 채널 | RSS 창 |
+|---|---|
+| 세금전문회계사김희연 | 9일 |
+| 택스인사이드 | 15일 |
+| 로뎀세무법인 | 20일 |
+| 상속마스터 정변 | 31일 |
+| 세무법인다솔 | 85일 |
+
+**김희연 채널이 9일**이므로 주 1회(7일)는 여유가 이틀뿐이다. 한 번 건너뛰면 유실된다.
+수동 실행이라면 **최소 주 1회**를 기준으로 삼고, 오래 쉬었다면 다음 실행 때
+`--backfill N` 으로 창 밖으로 밀려난 분량을 함께 회수한다.
+
+```powershell
+# 3주 쉬었다면 — baseline을 무시하고 과거 40건까지 훑어 누락분을 채운다
+python automation/youtube/youtube_watcher.py --channel "세금전문회계사김희연" --backfill 40
+```
+
+#### baseline_at 은 backfill·재생목록 수집 후 자동 확정된다 (2026-08-21 수정)
+
+`--backfill` 과 `playlist_fetch.py` 는 baseline 등록 분기를 거치지 않아 `baseline_at` 이
+`None` 으로 남았다. 그 상태에서 다음 일반 실행이 돌면 **"최초 실행"으로 오인해 RSS
+15건의 ledger 상태를 `baseline` 으로 덮어썼다**(`record()` 는 status를 무조건 덮어쓴다).
+수집된 raw 파일은 남지만 `success` 기록과 `no_caption` 재시도 대상이 지워진다.
+
+2026-08-21 `상속마스터 정변` 채널에서 실제로 4건이 이렇게 손상됐다(raw 파일 기준으로
+복구 완료). 이후 `_seal_baseline()` 이 backfill·재생목록 수집 직후 `baseline_at` 을
+자동으로 확정하므로 **더 이상 수동 조치가 필요하지 않다.**
+
+ledger가 raw와 어긋났다면 **raw 파일의 frontmatter가 정본**이다 — `video_id`·`title`·
+`published`·`transcript_source` 가 모두 들어 있으므로 ledger를 그것으로 되맞춘다.
+
+---
+
+## Windows 작업 스케줄러 등록 (선택 — 주 1회)
+
+자동화를 쓰지 않는 동안에는 이 절을 건너뛴다. 등록한다면 **월요일 오전 9시 주 1회**를
+기본값으로 한다.
 
 ### PowerShell로 등록 (권장)
 
@@ -132,8 +208,8 @@ $action  = New-ScheduledTaskAction -Execute $py `
     -Argument "`"$repo\automation\youtube\youtube_watcher.py`"" `
     -WorkingDirectory $repo
 
-$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) `
-    -RepetitionInterval (New-TimeSpan -Hours 1)
+# 주 1회 — 월요일 09:00
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 9am
 
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
@@ -152,7 +228,7 @@ Register-ScheduledTask -TaskName "LLM-WIKI YouTube Watcher" `
 
 1. `작업 스케줄러` → **작업 만들기**
 2. **일반**: 이름 `LLM-WIKI YouTube Watcher`, "사용자가 로그온할 때만 실행"
-3. **트리거**: 매일 → 반복 간격 `1시간`, 기간 `무기한`
+3. **트리거**: 매주 → `월요일` `09:00` (반복 간격은 설정하지 않는다)
 4. **동작**: 프로그램 시작
    - 프로그램: `%LOCALAPPDATA%\Programs\Python\Python312\pythonw.exe`
    - 인수: `"automation\youtube\youtube_watcher.py"`
@@ -203,6 +279,8 @@ automation/youtube/
 ├── captions.py          yt-dlp 자막 추출 (기계번역 배제)
 ├── normalize.py         VTT/SRT → 평문 (의미 불변)
 ├── writer.py            Markdown 조립 + 원자적 저장
+├── status.py            수집 상태 점검 + backfill 필요 판정 (읽기 전용)
+├── playlist_fetch.py    특정 재생목록 일괄 수집 (ledger 공유)
 ├── ledger.py            중복 방지 · 상태 · 재시도 백오프
 ├── channels.yaml        ← 채널 추가는 여기만
 ├── requirements.txt

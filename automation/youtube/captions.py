@@ -24,6 +24,27 @@ from dataclasses import dataclass
 from yt_dlp import YoutubeDL
 from yt_dlp.utils import DownloadError
 
+# 재시도가 무의미한 사유 (비공개·삭제·계정해지·지역차단).
+# ⚠️ yt-dlp는 YouTube가 **로케일에 맞춰 반환한 사유 문자열**을 그대로 전달한다.
+# 한국어 환경에서는 "Private video" 가 아니라 "비공개 동영상" 이 온다. 영어 키만 두면
+# 이런 영상이 재시도 가치가 있는 CaptionError(=failed)로 오분류되어 MAX_ATTEMPTS 까지
+# 헛되이 재시도한다. (2026-08-21 김희연 채널 3건이 실제로 이 경로로 failed 로 남았다.)
+_UNAVAILABLE_KEYS = (
+    # 영어
+    "private video", "video unavailable", "removed", "terminated", "deleted",
+    # 한국어
+    "비공개 동영상", "사용할 수 없", "삭제된", "해지된", "차단된",
+)
+
+# 로그인을 요구하는 영상(비공개·멤버십 전용)도 재시도가 무의미하다 —
+# 이 도구는 쿠키·로그인을 의도적으로 쓰지 않으므로 영구히 접근할 수 없다.
+# yt-dlp가 사유를 "로그인하세요." 로만 잘라 주는 경우가 있어 별도로 잡는다.
+_SIGNIN_KEYS = ("로그인", "sign in", "log in")
+
+# ⚠️ 단, 봇 확인 요구는 **일시적 rate limit** 이므로 반드시 재시도해야 한다.
+# 위 _SIGNIN_KEYS 보다 먼저 검사한다 — 두 메시지 모두 "로그인" 을 포함하기 때문이다.
+_BOT_CHECK_KEYS = ("not a bot", "봇이 아닌지", "confirm you", "bot에 해당하지")
+
 # 선호 자막 포맷 (파싱 가능한 것만, 선호 순)
 _SUB_FORMATS = ("vtt", "srt", "ttml")
 
@@ -154,10 +175,10 @@ def fetch_meta_and_transcript(video_id: str) -> tuple[VideoMeta, TranscriptResul
             info = ydl.extract_info(url, download=False)
     except DownloadError as exc:
         msg = str(exc).lower()
-        if any(
-            k in msg
-            for k in ("private video", "video unavailable", "removed", "terminated", "deleted")
-        ):
+        if any(k in msg for k in _BOT_CHECK_KEYS):
+            # 일시적 차단 — 재시도 대상
+            raise CaptionError(str(exc)) from exc
+        if any(k in msg for k in _UNAVAILABLE_KEYS) or any(k in msg for k in _SIGNIN_KEYS):
             raise VideoUnavailableError(str(exc)) from exc
         raise CaptionError(str(exc)) from exc
 

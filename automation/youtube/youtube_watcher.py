@@ -205,6 +205,22 @@ def process_video(
     return "success"
 
 
+def _seal_baseline(ledger: Ledger, args: argparse.Namespace, name: str) -> None:
+    """backfill 로 시작한 채널의 baseline_at 을 확정한다.
+
+    --backfill 은 baseline 등록 분기를 건너뛰므로 baseline_at 이 None 으로 남는다.
+    그대로 두면 다음 일반 실행이 "최초 실행"으로 오인해 RSS 15건의 ledger 상태를
+    baseline 으로 덮어쓴다(record() 는 status 를 무조건 덮어쓴다). 수집된 raw 파일은
+    남지만 success·no_caption 기록이 지워져 재시도 대상이 유실된다.
+    2026-08-21 상속마스터 정변 채널에서 실제로 4건이 이 경로로 손상됐다.
+    """
+    if not args.backfill or args.dry_run or ledger.baseline_at is not None:
+        return
+    ledger.set_baseline(now_kst())
+    ledger.save()
+    log.info("[%s] baseline_at 확정 — 이후 일반 실행이 이력을 덮어쓰지 않는다", name)
+
+
 def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> dict:
     name = channel_cfg["name"]
     stats = {"success": 0, "no_caption": 0, "failed": 0, "skipped": 0,
@@ -291,6 +307,7 @@ def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> 
 
     if not targets:
         log.info("[%s] 신규 영상 없음", name)
+        _seal_baseline(ledger, args, name)
         if not args.dry_run:
             ledger.save()
         return stats
@@ -310,6 +327,7 @@ def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> 
         if not args.dry_run:
             ledger.save()   # 영상마다 저장 — 중간에 죽어도 이력이 남는다
 
+    _seal_baseline(ledger, args, name)
     return stats
 
 
