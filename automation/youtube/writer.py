@@ -18,6 +18,12 @@ from pathlib import Path
 _ILLEGAL = re.compile(r'[<>:"/\\|?*]')
 # 제어문자
 _CONTROL = re.compile(r"[\x00-\x1f\x7f]")
+# Obsidian 위키링크를 깨는 문자 — 파일 시스템은 허용하지만 [[링크]]로 가리킬 수 없다.
+#   #  : 이후가 heading anchor로 해석된다. 이스케이프 수단이 없다.
+#   ^  : 이후가 block reference로 해석된다.
+#   [] : 선행 대괄호는 링크 여는 괄호에 먹혀 깨진 링크 → 클릭 시 유령 노트가 생성된다.
+# (CLAUDE.md 「대괄호로 시작하는 파일명」 참조)
+_LINK_HOSTILE = re.compile(r"[#^\[\]]")
 # Windows 예약 파일명
 _RESERVED = {
     "CON", "PRN", "AUX", "NUL",
@@ -35,6 +41,7 @@ def sanitize_title(title: str) -> str:
     name = unicodedata.normalize("NFC", title)
     name = _CONTROL.sub("", name)
     name = _ILLEGAL.sub("", name)
+    name = _LINK_HOSTILE.sub("", name)
     name = re.sub(r"\s+", " ", name).strip()
     name = name.rstrip(". ")  # Windows는 마침표/공백으로 끝나는 이름을 거부
 

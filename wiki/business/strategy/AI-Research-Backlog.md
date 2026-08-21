@@ -3,7 +3,7 @@ title: AI Research Backlog (연구 우선순위 큐)
 type: business
 business_type: strategy
 created: 2026-08-10
-updated: 2026-08-18
+updated: 2026-08-21
 tags: [strategy, research-queue, backlog, ai]
 ---
 
@@ -56,6 +56,9 @@ raw로 자료를 넣거나 외부 LLM에 질문을 던지기 전에, "무엇을 
 |---|---|---|---|---|
 | D1 | 소스요약 파일명 규칙 확정(`-소스요약` 접미사 + raw/automation vault 제외) — Obsidian 경로주입 재발 방지 | `CLAUDE.md` 2026-08-11 확정 | P2 | done |
 | D2 | practice/회계감사(legacy 도메인축) → 프로세스 축 migration 계획 | 이번 구조변경 시 legacy 지정 | P3 | parked |
+| D3 | [[DCF-가치평가-및-평가보고서-검토-실무]](70KB, 위키 최대) 분해 검토 — Deal Advisory 2번째 문서 생성 시점에 함께 | 2026-08-21 lint W4: 단일 페이지에 독립 개념 과다 병합 의심 | P3 | parked |
+| D4 | 조세특례(5)·법인세(4) 세목 하위폴더 승격 여부 재검토 | 2026-08-21 소득세(12) 승격 시 함께 검토했으나 탐색성 문제 없어 보류 | P3 | parked |
+| D5 | 상생임대주택 예규 9건 문서번호 확정 — NTS 본문이 JS 렌더라 자동조회 불가, 수동 확인 필요 | [[상생임대주택]] 9b (일자 불일치 1건 포함) | P2 | todo |
 
 ---
 

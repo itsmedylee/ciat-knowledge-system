@@ -20,3 +20,7 @@ automation/youtube/state/*.corrupt-*.json
 .env
 *.env
 cookies*.txt
+
+# 교정·마이그레이션 백업 (raw 불변 원칙: 원문은 git 이력이 보존한다)
+*.bak
+*.pre-correction-*

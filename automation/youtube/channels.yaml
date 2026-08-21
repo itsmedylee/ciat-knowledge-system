@@ -28,7 +28,7 @@ channels:
     # ★ 기존 수동 수집 컬렉션에 이어서 누적한다 — 새 폴더를 만들지 않는다.
     #   (이 폴더의 기존 .txt 28건과 동일한 지식 컬렉션이며,
     #    wiki/sources/세무법인다솔 유튜브 스터디/ 와 1:1 대응한다)
-    raw_dir: "raw/세무법인다솔 유튜브 스터디"
+    raw_dir: "raw/유튜브 스터디/세무법인다솔 유튜브 스터디"
 
     enabled: true
 
@@ -37,7 +37,7 @@ channels:
     category: 세무자문
 
     # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
-    raw_dir: "raw/로뎀세무법인 유튜브 스터디"
+    raw_dir: "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디"
 
     enabled: true
 
@@ -46,7 +46,17 @@ channels:
     category: 세무자문
 
     # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
-    raw_dir: "raw/세금전문회계사김희연 유튜브 스터디"
+    raw_dir: "raw/유튜브 스터디/세금전문회계사 김희연 유튜브 스터디"
+
+    enabled: true
+
+  - name: 상속마스터 정변
+    # 채널명 '상속마스터 정변'(법무법인 시완 정재완 변호사). 상속전문 변호사 채널.
+    url: "https://www.youtube.com/@chung_lawyer"
+    category: 법률
+
+    # 신규 채널 — 자체 컬렉션 폴더로 시작한다.
+    raw_dir: "raw/유튜브 스터디/상속마스터 정변 유튜브 스터디"
 
     enabled: true
 
@@ -54,5 +64,5 @@ channels:
   # - name: example-channel
   #   url: "https://www.youtube.com/@example"
   #   category: 재무자문
-  #   raw_dir: "raw/example-channel 유튜브 스터디"
+  #   raw_dir: "raw/유튜브 스터디/example-channel 유튜브 스터디"
   #   enabled: false

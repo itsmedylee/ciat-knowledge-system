@@ -49,7 +49,7 @@ channels:
   - name: 채널이름                     # state 파일명·로그에 쓰인다
     url: "https://www.youtube.com/@handle"   # @handle · /channel/UC... · /c/... 모두 가능
     category: 세무자문
-    raw_dir: "raw/채널이름 유튜브 스터디"      # 저장소 루트 기준 저장 위치
+    raw_dir: "raw/유튜브 스터디/채널이름 유튜브 스터디"  # 저장소 루트 기준 저장 위치
     enabled: true
 ```
 
