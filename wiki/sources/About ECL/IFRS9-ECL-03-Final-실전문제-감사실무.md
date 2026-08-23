@@ -34,7 +34,7 @@ sources: ["IFRS9-ECL-03-Final-실전문제-감사실무.md"]
 | 16~19 | 다중 시나리오 | 확률가중 149.5 ≈ 150 vs Base 100 / 평균변수 단일 투입 부적절 / Downside Weight 20%→30% 근거 / Stress Test 최악 시나리오 연계(20% 이상, `[2023 교재 기준]`) |
 | 20~21 | Validation | 예측 1.2% vs 실제 3.8%가 3년 반복 = 지속적 과소추정 / "크게 이상하면 수정"은 Performance Standard 부재 |
 | 22~23 | Overlay | 4대 질문 / 위험이 정상화됐는데 "보수적으로 유지"는 과대계상 — IFRS 추정은 보수주의가 목적이 아님 |
-| 종합 1~4 | 계좌 끝까지 계산(4.4억) / Bridge 기준 감사자원 배분 / Stage Migration 원인별 절차 설계 / **가정들이 일제히 낙관적으로 이동하는 패턴** = Management Bias 신호 |
+| 종합 1~4 | 종합 적용 | 계좌 끝까지 계산(4.4억) / Bridge 기준 감사자원 배분 / Stage Migration 원인별 절차 설계 / **가정들이 일제히 낙관적으로 이동하는 패턴** = Management Bias 신호 |
 
 ## 실무 산출물 (practice로 이관)
 
