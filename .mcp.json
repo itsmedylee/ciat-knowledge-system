@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "law-kr": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["automation/law/law_mcp.py"]
+    }
+  }
+}
