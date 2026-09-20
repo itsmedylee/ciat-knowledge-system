@@ -476,11 +476,10 @@
       "title": "증여,상속,양도 | 인생에서 1번은 무조건 내는 재산세 총정리",
       "published": "2026-08-21",
       "status": "no_caption",
-      "attempts": 1,
+      "attempts": 0,
       "first_seen": "2026-08-21T22:26:44+09:00",
       "last_attempt": "2026-08-21T22:38:37+09:00",
       "file": null,
-      "next_retry_after": "2026-08-21T23:08:37+09:00",
       "last_error": "no usable native ko/en track; {'manual': [], 'auto_has_ko': False, 'native': None}"
     },
     "R0M3qoG-Ez8": {
@@ -648,6 +647,229 @@
       "first_seen": "2026-08-21T22:36:42+09:00",
       "last_attempt": "2026-08-21T22:36:42+09:00",
       "file": null
+    },
+    "VMMAbJjjR3s": {
+      "channel": "택스인사이드",
+      "title": "내가 산 집이 경매로 넘어가는 과정 #부동산 #경매 #아파트",
+      "published": "2026-08-25",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-25T23:19:49+09:00",
+      "last_attempt": "2026-08-25T23:19:49+09:00",
+      "file": null,
+      "last_error": "duration 64s"
+    },
+    "EKpahy0jwos": {
+      "channel": "택스인사이드",
+      "title": "요즘 난리난 부동산 거래방법 #부동산 #아파트",
+      "published": "2026-08-24",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-25T23:19:51+09:00",
+      "last_attempt": "2026-08-25T23:19:51+09:00",
+      "file": null,
+      "last_error": "duration 69s"
+    },
+    "2RVPpGiknNo": {
+      "channel": "택스인사이드",
+      "title": "현 시점 부동산 임대사업자들의 상황 #부동산",
+      "published": "2026-08-30",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-31T00:01:40+09:00",
+      "last_attempt": "2026-08-31T00:03:01+09:00",
+      "file": null,
+      "last_error": "duration 61s"
+    },
+    "SERkPGFNoSE": {
+      "channel": "택스인사이드",
+      "title": "중소기업 830만 개 중 2.8%, 가업상속공제는 여기만 남았습니다ㅣ바늘구멍 통과만큼 어려워진 가업상속공제, 받으라는걸까? 말라는걸까?ㅣ택스인사이드 이정근 세무사",
+      "published": "2026-08-28",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-08-31T00:02:02+09:00",
+      "last_attempt": "2026-08-31T00:04:23+09:00",
+      "file": "raw/유튜브 스터디/택스인사이드 유튜브 스터디/2026-08-28-중소기업 830만 개 중 2.8%, 가업상속공제는 여기만 남았습니다ㅣ바늘구멍 통과만큼 어려워진 가업상속공제, 받으라는걸까 말라는걸까ㅣ택스인사이드.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "Csj-pltAxAg": {
+      "channel": "택스인사이드",
+      "title": "지금 부동산 정책은 이대로 가면 정말 위험합니다 #부동산",
+      "published": "2026-08-28",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-31T00:02:04+09:00",
+      "last_attempt": "2026-08-31T00:02:04+09:00",
+      "file": null,
+      "last_error": "duration 57s"
+    },
+    "j_vgCs__PoQ": {
+      "channel": "택스인사이드",
+      "title": "대출받아 집샀다고 세무조사라니요? #부동산 #대출 #세무조사 #아파트",
+      "published": "2026-08-26",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-08-31T00:02:05+09:00",
+      "last_attempt": "2026-08-31T00:02:05+09:00",
+      "file": null,
+      "last_error": "duration 48s"
+    },
+    "volGNpvM8Bc": {
+      "channel": "택스인사이드",
+      "title": "우리가 몰랐던 돈이 만들어지는 방식 #초고가주택 #부동산 #아파트",
+      "published": "2026-09-07",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-07T23:50:27+09:00",
+      "last_attempt": "2026-09-07T23:50:27+09:00",
+      "file": null,
+      "last_error": "duration 90s"
+    },
+    "k_twsdYu7cU": {
+      "channel": "택스인사이드",
+      "title": "초고가아파트의 소름돋는 공통점 #초고가주택 #부동산 #아파트",
+      "published": "2026-09-06",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-09-07T23:50:39+09:00",
+      "last_attempt": "2026-09-07T23:50:39+09:00",
+      "file": "raw/유튜브 스터디/택스인사이드 유튜브 스터디/2026-09-06-초고가아파트의 소름돋는 공통점 초고가주택 부동산 아파트.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "ssduk9-JLvY": {
+      "channel": "택스인사이드",
+      "title": "청담동, 한남동의 초고가주택들은 왜 29세대로만 지을까? #청담동 #한남동 #초고가주택 #아파트",
+      "published": "2026-09-05",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-07T23:50:40+09:00",
+      "last_attempt": "2026-09-07T23:50:40+09:00",
+      "file": null,
+      "last_error": "duration 52s"
+    },
+    "2nV0sTWSIyY": {
+      "channel": "택스인사이드",
+      "title": "부동산 근저당 거래 함부로 따라하지마세요",
+      "published": "2026-09-03",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-07T23:50:42+09:00",
+      "last_attempt": "2026-09-07T23:50:42+09:00",
+      "file": null,
+      "last_error": "duration 96s"
+    },
+    "DRlD5wrjK54": {
+      "channel": "택스인사이드",
+      "title": "부동산 공시지가와 실거래가가 다른 진짜 이유 #부동산 #실거래 #공시지가",
+      "published": "2026-09-02",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-07T23:50:44+09:00",
+      "last_attempt": "2026-09-07T23:50:44+09:00",
+      "file": null,
+      "last_error": "duration 100s"
+    },
+    "v8SjbLzftcI": {
+      "channel": "택스인사이드",
+      "title": "가업상속공제 적용받는 업종은 어떤걸까? #가업상속공제",
+      "published": "2026-09-13",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:41+09:00",
+      "last_attempt": "2026-09-13T09:51:41+09:00",
+      "file": null,
+      "last_error": "duration 69s"
+    },
+    "1KGYI5gE6Ek": {
+      "channel": "택스인사이드",
+      "title": "가업상속공제 29년만에 싹 바뀝니다 #가업상속공제",
+      "published": "2026-09-12",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:42+09:00",
+      "last_attempt": "2026-09-13T09:51:42+09:00",
+      "file": null,
+      "last_error": "duration 42s"
+    },
+    "9tEEkDaDyMQ": {
+      "channel": "택스인사이드",
+      "title": "이제 주장과 베이커리카페는 가업상속공제 못 받습니다. #가업상속공제",
+      "published": "2026-09-11",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:44+09:00",
+      "last_attempt": "2026-09-13T09:51:44+09:00",
+      "file": null,
+      "last_error": "duration 91s"
+    },
+    "WjfpOMO4IQ0": {
+      "channel": "택스인사이드",
+      "title": "부동산 부자들이 돈을 버는 방법 #부동산 #초고가주택",
+      "published": "2026-09-10",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:45+09:00",
+      "last_attempt": "2026-09-13T09:51:45+09:00",
+      "file": null,
+      "last_error": "duration 46s"
+    },
+    "fYZl26oxVwQ": {
+      "channel": "택스인사이드",
+      "title": "100억이 있다면 어디에 투자하시겠습니까?  #투자 #100억",
+      "published": "2026-09-09",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:47+09:00",
+      "last_attempt": "2026-09-13T09:51:47+09:00",
+      "file": null,
+      "last_error": "duration 117s"
+    },
+    "HZn0ziFZSUk": {
+      "channel": "택스인사이드",
+      "title": "이 숫자를 보면 집값이 왜 올랐는지 알 수 있어요 #초고가주택 #아파트 #부동산",
+      "published": "2026-09-08",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-13T09:51:48+09:00",
+      "last_attempt": "2026-09-13T09:51:48+09:00",
+      "file": null,
+      "last_error": "duration 31s"
+    },
+    "S2t0WYlfUgw": {
+      "channel": "택스인사이드",
+      "title": "상속 날짜 하나로 300억이 날아갑니다 #가업상속공제",
+      "published": "2026-09-17",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-09-17T23:22:35+09:00",
+      "last_attempt": "2026-09-17T23:22:35+09:00",
+      "file": "raw/유튜브 스터디/택스인사이드 유튜브 스터디/2026-09-17-상속 날짜 하나로 300억이 날아갑니다 가업상속공제.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "lnwvpKwkymg": {
+      "channel": "택스인사이드",
+      "title": "가업상속받으려면 30년을 버텨라? 진실은 이겁니다 #가업상속공제",
+      "published": "2026-09-16",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-17T23:22:37+09:00",
+      "last_attempt": "2026-09-17T23:22:37+09:00",
+      "file": null,
+      "last_error": "duration 81s"
+    },
+    "ra75YtzKn7Q": {
+      "channel": "택스인사이드",
+      "title": "가업상속공제, 달라진 핵심 포인트 짚어드릴게요 #가업상속공제",
+      "published": "2026-09-15",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-09-17T23:22:40+09:00",
+      "last_attempt": "2026-09-17T23:22:40+09:00",
+      "file": null,
+      "last_error": "duration 25s"
     }
   }
 }
