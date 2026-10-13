@@ -641,6 +641,196 @@
       "last_attempt": "2026-09-17T23:23:15+09:00",
       "file": null,
       "last_error": "duration 46s"
+    },
+    "gSlzSIDFNVs": {
+      "channel": "로뎀세무법인",
+      "title": "\"사업용카드는 따로 있나요?\" 자주 묻는 질문 3가지",
+      "published": "2026-10-02",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:06+09:00",
+      "last_attempt": "2026-10-03T00:33:06+09:00",
+      "file": null,
+      "last_error": "duration 81s"
+    },
+    "2r9t717m8pA": {
+      "channel": "로뎀세무법인",
+      "title": "세금신고 조정료는 얼마인가요? 로뎀세무법인 가격 공개!",
+      "published": "2026-10-01",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:07+09:00",
+      "last_attempt": "2026-10-03T00:33:07+09:00",
+      "file": null,
+      "last_error": "duration 100s"
+    },
+    "u_Z3LstEWRA": {
+      "channel": "로뎀세무법인",
+      "title": "세무기장료 전부 공개합니다! | 세무기장 베이직 서비스",
+      "published": "2026-09-30",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:09+09:00",
+      "last_attempt": "2026-10-03T00:33:09+09:00",
+      "file": null,
+      "last_error": "duration 76s"
+    },
+    "NXrqdSc_4Ps": {
+      "channel": "로뎀세무법인",
+      "title": "세무기장료 투명하게 오픈합니다! | 세무기장 라이트 서비스",
+      "published": "2026-09-29",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:11+09:00",
+      "last_attempt": "2026-10-03T00:33:11+09:00",
+      "file": null,
+      "last_error": "duration 96s"
+    },
+    "2KYO3sNYsRU": {
+      "channel": "로뎀세무법인",
+      "title": "가족 법인? 세금 아끼면서 증여·상속 가능한 원리!",
+      "published": "2026-09-24",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:13+09:00",
+      "last_attempt": "2026-10-03T00:33:13+09:00",
+      "file": null,
+      "last_error": "duration 78s"
+    },
+    "HYhzkaVvk1c": {
+      "channel": "로뎀세무법인",
+      "title": "가족 법인이 절세 되는 이유는, 여기에 있습니다!",
+      "published": "2026-09-23",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:14+09:00",
+      "last_attempt": "2026-10-03T00:33:14+09:00",
+      "file": null,
+      "last_error": "duration 96s"
+    },
+    "F1uvfZeWIVo": {
+      "channel": "로뎀세무법인",
+      "title": "\"시원하게 오픈합니다.\" 현직 세무법인 대표가 공개하는 세무 기장 수수료",
+      "published": "2026-09-23",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:16+09:00",
+      "last_attempt": "2026-10-03T00:33:16+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-09-23-시원하게 오픈합니다. 현직 세무법인 대표가 공개하는 세무 기장 수수료.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "lmpZ20wrO6s": {
+      "channel": "로뎀세무법인",
+      "title": "가족 법인 설립 전, 주의 사항부터 챙기세요.",
+      "published": "2026-09-22",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:18+09:00",
+      "last_attempt": "2026-10-03T00:33:18+09:00",
+      "file": null,
+      "last_error": "duration 79s"
+    },
+    "SjouqT5tqpc": {
+      "channel": "로뎀세무법인",
+      "title": "가족 법인이란 무엇인지 알려드려요.",
+      "published": "2026-09-21",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:20+09:00",
+      "last_attempt": "2026-10-03T00:33:20+09:00",
+      "file": null,
+      "last_error": "duration 54s"
+    },
+    "XOxDbHwJyrk": {
+      "channel": "로뎀세무법인",
+      "title": "아직도 못 받고 계시나요? 엄청난 세금 혜택이에요!",
+      "published": "2026-09-20",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:21+09:00",
+      "last_attempt": "2026-10-03T00:33:21+09:00",
+      "file": null,
+      "last_error": "duration 70s"
+    },
+    "2vnez8zunwo": {
+      "channel": "로뎀세무법인",
+      "title": "놓치면 손해에요! 사업할 때 무조건 발생하는 경비 3가지",
+      "published": "2026-09-17",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:33:23+09:00",
+      "last_attempt": "2026-10-03T00:33:23+09:00",
+      "file": null,
+      "last_error": "duration 48s"
+    },
+    "IhvwbE6wChI": {
+      "channel": "로뎀세무법인",
+      "title": "사업용카드 쓰면서 절세까지, 팁만 빠르게 받아가기",
+      "published": "2026-10-06",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-07T22:15:35+09:00",
+      "last_attempt": "2026-10-07T22:15:35+09:00",
+      "file": null,
+      "last_error": "duration 93s"
+    },
+    "HFH2yFb2Uxs": {
+      "channel": "로뎀세무법인",
+      "title": "권고사직 vs 해고, 완전히 다른 결과를 가져옵니다 | 김소라 노무사 (노동법률사무소 신뢰)",
+      "published": "2026-10-06",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-10-07T22:15:37+09:00",
+      "last_attempt": "2026-10-07T22:15:37+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-10-06-권고사직 vs 해고, 완전히 다른 결과를 가져옵니다 김소라 노무사 (노동법률사무소 신뢰).md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "D_ZEc_J7szc": {
+      "channel": "로뎀세무법인",
+      "title": "사업용카드, 이렇게 쓰면 인정 못 받을 수 있어요!",
+      "published": "2026-10-05",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-07T22:15:39+09:00",
+      "last_attempt": "2026-10-07T22:15:39+09:00",
+      "file": null,
+      "last_error": "duration 94s"
+    },
+    "rQrvy-kWTS0": {
+      "channel": "로뎀세무법인",
+      "title": "사업용 지출과 개인 지출의 구분 범위를 정해드려요.",
+      "published": "2026-10-04",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-07T22:15:41+09:00",
+      "last_attempt": "2026-10-07T22:15:41+09:00",
+      "file": null,
+      "last_error": "duration 86s"
+    },
+    "oUpKxppT8Lg": {
+      "channel": "로뎀세무법인",
+      "title": "자진퇴사 직원에게 실업급여 처리는 위험합니다.",
+      "published": "2026-10-12",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-14T00:47:05+09:00",
+      "last_attempt": "2026-10-14T00:47:05+09:00",
+      "file": null,
+      "last_error": "duration 68s"
+    },
+    "2DKpYmKCE4s": {
+      "channel": "로뎀세무법인",
+      "title": "온라인 쇼핑몰, 매출 늘었다면 반드시 확인해야 할 8가지 (with 셀러오션)",
+      "published": "2026-10-11",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-10-14T00:47:07+09:00",
+      "last_attempt": "2026-10-14T00:47:07+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-10-11-온라인 쇼핑몰, 매출 늘었다면 반드시 확인해야 할 8가지 (with 셀러오션).md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
     }
   }
 }

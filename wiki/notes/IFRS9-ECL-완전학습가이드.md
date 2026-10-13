@@ -10,6 +10,7 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 
 # IFRS 9 ECL 완전학습가이드
 
+> [!info] 개요
 > **이 문서는 순서만 소유한다.** 내용은 복제하지 않고 정본 페이지로 링크만 건다.
 > 원자료: `raw/회계자문 및 회계감사/IFRS9 ECL/` 3부작 (기초 → 심화 → 실전). 자료 성격과 한계는 각 소스 요약 참조.
 
@@ -34,6 +35,28 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
                   [[ECL-모형검증과-오버레이]]
                               │
                   [[ECL-감사절차와-체크리스트]]   ← 업무 적용
+```
+
+**다이어그램 (위 코드블록과 같은 내용)**
+
+%% ciat-design: 시각화 추가 — 아래 다이어그램은 바로 위 코드블록의 내용만 옮긴 것 (원문 우선) %%
+
+```mermaid
+flowchart TD
+  H["기대신용손실-ECL-계산구조"]
+  H --> A["A. Stage 축"] --> S["ECL-스테이지와-SICR"]
+  H --> B["B. RC 축"]
+  B --> PD["ECL-PD-부도확률"]
+  B --> LGD["ECL-LGD-부도시손실률"]
+  B --> EAD["ECL-EAD와-CCF"]
+  H --> C["C. FLI 축"] --> F["ECL-미래전망정보와-다중시나리오"]
+  S --> V["ECL-모형검증과-오버레이"]
+  PD --> V
+  LGD --> V
+  EAD --> V
+  F --> V
+  V --> AU["ECL-감사절차와-체크리스트"]
+  class H,S,PD,LGD,EAD,F,V,AU internal-link;
 ```
 
 ## 학습 순서

@@ -10,6 +10,7 @@ sources: ["IFRS9-ECL-03-Final-실전문제-감사실무.md"]
 
 # IFRS9-ECL-03-Final-실전문제-감사실무 (소스 요약)
 
+> [!quote] 출처
 > 원본: `raw/회계자문 및 회계감사/IFRS9 ECL/IFRS9-ECL-03-Final-실전문제-감사실무.md` (불변, 수정하지 않음)
 > 원본이 밝힌 근거: 2023 Deloitte Anjin IFRS 9 ECL 교재 + 강의 녹취 기반 2차 가공물.
 > ⚠️ 원본이 스스로 명시: **"문제에 등장하는 차주명·금액·등급·확률은 학습용 가상수치"**. Stage 구조·RC·SICR·FLI·다중시나리오·Validation·Overlay의 논리만 교재·녹취를 따른다.

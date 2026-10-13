@@ -10,6 +10,7 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 
 # ECL 감사절차와 체크리스트
 
+> [!info] 개요
 > **업무 문서(practice)다.** 개념·근거는 복제하지 않고 정본 topic을 링크로 참조한다.
 > 개념 정본: [[기대신용손실-ECL-계산구조]] · [[ECL-스테이지와-SICR]] · [[ECL-PD-부도확률]] · [[ECL-LGD-부도시손실률]] · [[ECL-EAD와-CCF]] · [[ECL-미래전망정보와-다중시나리오]] · [[ECL-모형검증과-오버레이]]
 
@@ -52,6 +53,7 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 | Exposure 증가 | +100 | |
 | Overlay | +50 | 금액은 작아도 **수기 Judgment**이므로 별도 위험평가 |
 
+> [!note] 참고
 > 원칙: 우선순위는 **금액만이 아니라 판단 개입 정도**를 함께 본다.
 
 ## 2. FINAL AUDIT WALK-THROUGH (7단계)
@@ -203,4 +205,5 @@ ECL 감사는 **Arithmetic Audit이 아니라 Estimation Audit**이다. 조서�
 
 [[IFRS9-ECL-01-기초-완벽마스터]] (PART 19·20·23·24), [[IFRS9-ECL-02-심화-모형이해]] (PART K·L·M), [[IFRS9-ECL-03-Final-실전문제-감사실무]] (종합문제 2~4, FINAL WALK-THROUGH, 체크리스트, RED FLAGS)
 
+> [!warning] 주의
 > ⚠️ 이 체크리스트는 2023년 교재·강의 기반 2차 가공물에서 도출한 것이다. 실제 감사 적용 시 소속 법인의 감사방법론·현행 감독지침을 우선한다 `[현행 기준 확인 필요]`.

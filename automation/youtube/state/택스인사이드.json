@@ -870,6 +870,28 @@
       "last_attempt": "2026-09-17T23:22:40+09:00",
       "file": null,
       "last_error": "duration 25s"
+    },
+    "pqHWO_DSe_E": {
+      "channel": "택스인사이드",
+      "title": "회사의 승계구조를 알아야 제대로 된 가업상속이 가능합니다 #가업상속공제",
+      "published": "2026-09-19",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:34:12+09:00",
+      "last_attempt": "2026-10-03T00:34:12+09:00",
+      "file": null,
+      "last_error": "duration 30s"
+    },
+    "ozP_1gyLxnQ": {
+      "channel": "택스인사이드",
+      "title": "상속세 때문에 멀쩡한 회사가 문을 닫습니다 #상속세",
+      "published": "2026-09-18",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-03T00:34:14+09:00",
+      "last_attempt": "2026-10-03T00:34:14+09:00",
+      "file": null,
+      "last_error": "duration 67s"
     }
   }
 }
