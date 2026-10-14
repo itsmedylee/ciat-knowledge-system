@@ -2,7 +2,7 @@
 title: IFRS 9 ECL 완전학습가이드
 type: note
 created: 2026-08-09
-updated: 2026-08-09
+updated: 2026-10-14
 domain: 회계
 tags: [IFRS9, ECL, 학습가이드, 커리큘럼]
 sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해, IFRS9-ECL-03-Final-실전문제-감사실무]
@@ -12,7 +12,7 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 
 > [!info] 개요
 > **이 문서는 순서만 소유한다.** 내용은 복제하지 않고 정본 페이지로 링크만 건다.
-> 원자료: `raw/회계자문 및 회계감사/IFRS9 ECL/` 3부작 (기초 → 심화 → 실전). 자료 성격과 한계는 각 소스 요약 참조.
+> 원자료: `raw/회계자문 및 회계감사/IFRS9 ECL/` 3부작 (기초 → 심화 → 실전). 자료 성격과 한계는 각 소스 요약에서 확인한다.
 
 ## 개념 관계도
 
@@ -61,33 +61,33 @@ flowchart TD
 
 ## 학습 순서
 
-### 1단계 — 전체 그림 (여기서 시작)
-1. [[기대신용손실-ECL-계산구조]] — ECL 한 문장 정의, EL vs ECL, IAS 39 → IFRS 9 전환, 전체 공정, 5개 층, DATA/MODEL/JUDGMENT
+### 1단계: 전체 그림 (여기서 시작)
+1. [[기대신용손실-ECL-계산구조]]: ECL 한 문장 정의, EL vs ECL, IAS 39 → IFRS 9 전환, 전체 공정, 5개 층, DATA/MODEL/JUDGMENT
    → 이 한 페이지만 이해해도 "ECL이 무엇의 결과물인가"는 잡힌다.
 
-### 2단계 — Stage 축 (가장 중요)
-2. [[ECL-스테이지와-SICR]] — Stage 1·2·3, SICR, Horizon Effect, Stage Migration, Cure
+### 2단계: Stage 축 (가장 중요)
+2. [[ECL-스테이지와-SICR]]: Stage 1·2·3, SICR, Horizon Effect, Stage Migration, Cure
 
-### 3단계 — Risk Component 축
-3. [[ECL-PD-부도확률]] — 경험 PD → 12M/Lifetime → 기간구조 → Basel 변환 → Credit Cycle·LDP
-4. [[ECL-LGD-부도시손실률]] — 할인·비용·회수관찰기간 → 담보 LGD → **N:N 배분(가장 어려움)**
-5. [[ECL-EAD와-CCF]] — 한도대출과 CCF
+### 3단계: Risk Component 축
+3. [[ECL-PD-부도확률]]: 경험 PD → 12M/Lifetime → 기간구조 → Basel 변환 → Credit Cycle·LDP
+4. [[ECL-LGD-부도시손실률]]: 할인·비용·회수관찰기간 → 담보 LGD → **N:N 배분(가장 어려움)**
+5. [[ECL-EAD와-CCF]]: 한도대출과 CCF
 
-### 4단계 — 미래전망 축
-6. [[ECL-미래전망정보와-다중시나리오]] — FLI multiplier, 변수 선정, 비선형성과 확률가중, Weight 변경, Stress Test와의 차이
+### 4단계: 미래전망 축
+6. [[ECL-미래전망정보와-다중시나리오]]: FLI multiplier, 변수 선정, 비선형성과 확률가중, Weight 변경, Stress Test와의 차이
 
-### 5단계 — 거버넌스
-7. [[ECL-모형검증과-오버레이]] — Performance Standard, Backtesting, Recalibration/Redevelopment, Overlay 4대 질문
+### 5단계: 거버넌스
+7. [[ECL-모형검증과-오버레이]]: Performance Standard, Backtesting, Recalibration/Redevelopment, Overlay 4대 질문
 
-### 6단계 — 업무 적용
-8. [[ECL-감사절차와-체크리스트]] — 조서 읽는 순서, Bridge 기반 자원배분, PBC, 영역별 체크리스트, RED FLAGS 15개
+### 6단계: 업무 적용
+8. [[ECL-감사절차와-체크리스트]]: 조서 읽는 순서, Bridge 기반 자원배분, PBC, 영역별 체크리스트, RED FLAGS 15개
 
-### 7단계 — 문제로 확인
+### 7단계: 문제로 확인
 9. 원본 3편([[IFRS9-ECL-03-Final-실전문제-감사실무]])의 문제 23개 + 종합문제 4개를 직접 푼다. 정답 해설은 소스 요약의 표로 확인 가능하고, 각 문제가 검증하는 개념은 위 정본 페이지에 있다.
 
 ## 자기점검 (Level 1 → 10)
 
-원본 3편이 제시하는 도달도 점검. 답할 수 있으면 해당 단계는 넘어간 것이다.
+원본 3편이 제시하는 도달도를 점검한다. 답할 수 있으면 해당 단계는 넘어간 것이다.
 
 | Level | 질문 | 관련 정본 |
 |---|---|---|
@@ -126,7 +126,7 @@ flowchart TD
 ## 앞으로 채우면 좋은 공백
 
 - **집합평가 vs 개별평가**: 원자료는 비소매=등급 단위 / 소매=Pool 단위 구분과 Stage 3 개별 검토를 다루지만, **집합평가·개별평가의 기준서상 구분을 명시적으로 다루지 않는다.** 별도 자료로 보강 필요.
-- **IFRS 9 기준서 문단 매핑** — 각 개념에 대응하는 기준서 근거.
-- **단순화된 접근법(매출채권 등 provision matrix)** — 원자료는 금융회사 대출 중심이라 비금융업 적용을 다루지 않는다.
+- **IFRS 9 기준서 문단 매핑**: 각 개념에 대응하는 기준서 근거.
+- **단순화된 접근법(매출채권 등 provision matrix)**: 원자료는 금융회사 대출 중심이라 비금융업 적용을 다루지 않는다.
 - **국내 감독규정 현행본** 대조.
 - 재무제표 표시·주석 공시 요구사항.

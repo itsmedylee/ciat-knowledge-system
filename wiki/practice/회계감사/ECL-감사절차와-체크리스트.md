@@ -2,7 +2,7 @@
 title: ECL 감사절차와 체크리스트
 type: workflow
 created: 2026-08-09
-updated: 2026-08-09
+updated: 2026-10-14
 domain: 회계
 tags: [IFRS9, ECL, 감사절차, 체크리스트, PBC, RedFlag]
 sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해, IFRS9-ECL-03-Final-실전문제-감사실무]
@@ -11,12 +11,12 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 # ECL 감사절차와 체크리스트
 
 > [!info] 개요
-> **업무 문서(practice)다.** 개념·근거는 복제하지 않고 정본 topic을 링크로 참조한다.
+> **이 문서는 업무 문서(practice)다.** 개념과 근거는 복제하지 않고, 정본 topic으로 연결한다.
 > 개념 정본: [[기대신용손실-ECL-계산구조]] · [[ECL-스테이지와-SICR]] · [[ECL-PD-부도확률]] · [[ECL-LGD-부도시손실률]] · [[ECL-EAD와-CCF]] · [[ECL-미래전망정보와-다중시나리오]] · [[ECL-모형검증과-오버레이]]
 
-## 0. 감사 지도 — 3축
+## 0. 감사 지도: 3축
 
-복잡한 ECL 조서를 받아도 길을 잃지 않는 압축 프레임.
+복잡한 ECL 조서를 받아도 핵심을 놓치지 않도록 정리한 압축 프레임이다.
 
 | 축 | 질문 | 핵심 | 정본 |
 |---|---|---|---|
@@ -30,15 +30,15 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 
 | STEP | 무엇을 | 왜 |
 |---|---|---|
-| **1** | **충당금 Bridge** — 전기말 ECL → Stage 변화 → Exposure 변화 → RC 변화 → FLI 변화 → Overlay → 당기말 ECL | 전체 흐름을 먼저 잡고 **위험지역을 특정**한다 |
-| 2 | Stage Distribution — Stage 1/2/3 잔액, 전기 대비 migration | Stage 2 비율 변동 원인 |
-| 3 | SICR Policy — 신용등급·연체·Watchlist·자산건전성·정성 Trigger | 정책 변경 여부 |
-| 4 | PD — 12M / Lifetime / FLI Adjustment / Segment | |
-| 5 | LGD — 담보·회수율·할인율·회수기간·비용·담보배분 | |
-| 6 | EAD — 특히 한도성 자산의 한도·사용잔액·CCF | |
-| 7 | FLI — 변수·선택근거·시나리오·확률·전기 대비 변동 | |
-| 8 | Validation Report — 모델 성능 미달, Override | |
-| 9 | Overlay — 모델 밖 조정 금액 | |
+| **1** | **충당금 Bridge**: 전기말 ECL → Stage 변화 → Exposure 변화 → RC 변화 → FLI 변화 → Overlay → 당기말 ECL | 전체 흐름을 먼저 잡고 **위험지역을 특정**한다 |
+| 2 | Stage Distribution: Stage 1/2/3 잔액, 전기 대비 migration | Stage 2 비율 변동 원인 |
+| 3 | SICR Policy: 신용등급·연체·Watchlist·자산건전성·정성 Trigger | 정책 변경 여부 |
+| 4 | PD: 12M / Lifetime / FLI Adjustment / Segment | |
+| 5 | LGD: 담보·회수율·할인율·회수기간·비용·담보배분 | |
+| 6 | EAD: 특히 한도성 자산의 한도·사용잔액·CCF | |
+| 7 | FLI: 변수·선택근거·시나리오·확률·전기 대비 변동 | |
+| 8 | Validation Report: 모델 성능 미달, Override | |
+| 9 | Overlay: 모델 밖 조정 금액 | |
 
 ### 1-1. Bridge로 감사자원을 배분한다
 
@@ -46,9 +46,9 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 
 | 원인 | 효과 | 우선순위 |
 |---|---:|---|
-| Stage Migration | +450 | **1순위** — SICR 정책·Stage 1→2 이동이 최대 원인 |
-| FLI | +200 | **2순위** — 주관성·모델링 판단이 큼 |
-| PD 변경 | +100 | 3순위 — 모형·데이터 변경 원인 분해 |
+| Stage Migration | +450 | **1순위**: SICR 정책·Stage 1→2 이동이 최대 원인 |
+| FLI | +200 | **2순위**: 주관성·모델링 판단이 큼 |
+| PD 변경 | +100 | 3순위: 모형·데이터 변경 원인 분해 |
 | LGD 변경 | +100 | 3순위 |
 | Exposure 증가 | +100 | |
 | Overlay | +50 | 금액은 작아도 **수기 Judgment**이므로 별도 위험평가 |
@@ -61,16 +61,16 @@ sources: [IFRS9-ECL-01-기초-완벽마스터, IFRS9-ECL-02-심화-모형이해,
 1. **회사의 ECL Architecture를 그린다**
    `Source Systems(대출·등급·연체·담보·한도·부도·회수) → Risk System(PD·LGD·CCF/EAD) → IFRS Adjustment(EIR·비용·IFRS Segment·Lifetime PD·FLI) → ECL Engine(Stage·Scenario·Probability Weighting) → Manual Adjustment(Overlay) → GL/재무제표`
    이 그림이 없으면 세부 Testing을 해도 전체 위험을 놓친다.
-2. **Stage부터 본다** — Stage가 ECL Horizon을 결정하므로 첫 질문은 "Stage가 맞습니까?"
-3. **Stage Migration을 본다** — 1→2, 2→1, 2→3, 3→2 이동에서 이상 Movement 탐색
-4. **Risk Component를 본다** — PD(데이터·Default·Segment·12M·Lifetime·FLI) / LGD(Recovery·Discount·Cost·Collateral·Allocation) / EAD(Balance·Limit·CCF)
-5. **FLI를 본다** — 변수·Source·시나리오 값·확률·비선형성 반영
-6. **Validation을 본다** — 정책·정량기준·정성 타당성·기준 미달 시 대응
-7. **Overlay를 본다** — Trigger·측정근거·Double Counting·Governance·Release 기준
+2. **Stage부터 본다**. Stage가 ECL Horizon을 결정하므로 첫 질문은 "Stage가 맞습니까?"이다.
+3. **Stage Migration을 본다**. 1→2, 2→1, 2→3, 3→2 이동에서 이상한 Movement가 없는지 찾는다.
+4. **Risk Component를 본다**. 점검 대상은 PD(데이터·Default·Segment·12M·Lifetime·FLI) / LGD(Recovery·Discount·Cost·Collateral·Allocation) / EAD(Balance·Limit·CCF)다.
+5. **FLI를 본다**. 변수·Source·시나리오 값·확률과 비선형성이 반영됐는지 확인한다.
+6. **Validation을 본다**. 정책·정량기준·정성적 타당성과, 기준에 미달할 때의 대응을 확인한다.
+7. **Overlay를 본다**. Trigger·측정근거·Double Counting·Governance·Release 기준을 확인한다.
 
 ## 3. Stage Migration 원인별 감사절차
 
-Breakdown을 받아 Trigger별로 설계한다.
+Breakdown 자료를 받아 Trigger별로 감사절차를 설계한다.
 
 | Trigger | 절차 |
 |---|---|
@@ -81,7 +81,7 @@ Breakdown을 받아 Trigger별로 설계한다.
 
 ## 4. 첫 PBC Request (4분류)
 
-처음부터 수백 개를 요청하지 않고 구조적으로 요청한다.
+처음부터 자료 수백 개를 요청하지 말고, 아래처럼 구조를 나눠 요청한다.
 
 | 분류 | 항목 |
 |---|---|
@@ -159,7 +159,7 @@ Breakdown을 받아 Trigger별로 설계한다.
 - [ ] 승인 (Governance)
 - [ ] **Release(해제) 기준**
 
-## 6. RED FLAGS — 보이면 바로 파고든다
+## 6. RED FLAGS: 보이면 바로 파고든다
 
 | # | 신호 |
 |---|---|
@@ -181,7 +181,7 @@ Breakdown을 받아 Trigger별로 설계한다.
 
 ### 6-1. 개별 항목보다 "방향성"을 본다
 
-다음이 동시에 나타났다고 하자 — Stage 2 비율 급감 / 경제전망은 악화 / Downside Weight 감소 / 일부 Segment Validation 기준 미달 / Overlay 축소.
+다음이 동시에 나타났다고 하자: Stage 2 비율 급감 / 경제전망은 악화 / Downside Weight 감소 / 일부 Segment Validation 기준 미달 / Overlay 축소.
 
 각각을 개별적으로 틀렸다고 단정할 수는 없다. 그러나 **전체가 일관되게 충당금 감소 방향으로 움직이는 것 자체가 Risk Signal**이다. Possible Management Bias를 염두에 두고 SICR Policy 변경 · Stage Cure 기준 · Scenario Weight · FLI Model 변경 · Validation 미달 대응 · Overlay Release 근거 · 경영진 승인자료를 **연결해서** 본다.
 
@@ -195,9 +195,9 @@ Breakdown을 받아 Trigger별로 설계한다.
 | "FLI는 뭘 보는 거야?" | 어떤 거시변수를 왜 선택했는지, 시나리오 값과 발생확률의 근거, 복수 시나리오와 비선형성이 적절히 반영됐는지를 봅니다. |
 | "Overlay가 뭐야?" | 기존 모델이 포착하지 못하는 추가위험을 모델 밖에서 보정하는 것입니다. 필요성, 금액 산정근거, FLI와의 중복, 해제기준이 중요합니다. |
 
-## 8. 사고방식 — 숫자가 맞는 것과 추정이 맞는 것
+## 8. 사고방식: 숫자가 맞는 것과 추정이 맞는 것
 
-ECL 감사는 **Arithmetic Audit이 아니라 Estimation Audit**이다. 조서의 한 행을 볼 때 초보자는 `11% × 42% × 100`을 계산하지만, 숙련자는 먼저 묻는다 — Stage는 왜 2인가 / PD 11%는 12M인가 Lifetime인가 / LGD 42%는 어떤 회수·담보·할인 가정인가 / EAD 100은 현재잔액인가 부도시 노출액인가 / FLI는 PD에 들어갔나 LGD에도 들어갔나 / 이 수치는 단일 시나리오인가 확률가중인가 / Validation 결과는 정상인가 / Overlay가 포함되어 있나.
+ECL 감사는 **Arithmetic Audit이 아니라 Estimation Audit**이다. 조서의 한 행을 볼 때 초보자는 `11% × 42% × 100`을 계산하지만, 숙련자는 먼저 다음을 묻는다: Stage는 왜 2인가 / PD 11%는 12M인가 Lifetime인가 / LGD 42%는 어떤 회수·담보·할인 가정인가 / EAD 100은 현재잔액인가 부도시 노출액인가 / FLI는 PD에 들어갔나 LGD에도 들어갔나 / 이 수치는 단일 시나리오인가 확률가중인가 / Validation 결과는 정상인가 / Overlay가 포함되어 있나.
 
 배경 프레임은 [[기대신용손실-ECL-계산구조]] 5-2 (**DATA → MODEL → JUDGMENT**).
 

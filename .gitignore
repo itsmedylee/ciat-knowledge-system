@@ -28,3 +28,4 @@ cookies*.txt
 # 법제처 조회 (automation/law)
 automation/law/.cache/
 automation/law/oc.txt
+.design-backup/
