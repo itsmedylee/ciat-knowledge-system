@@ -212,6 +212,15 @@ sources: [소스-파일명]        # 이 페이지가 참조하는 raw 소스 (�
 - Mermaid 위에는 `**다이어그램 (위 내용과 같은 내용)**` 같은 출처 라벨 한 줄을 붙인다. 노드 이름이 위키 문서명과 같으면 `class 노드 internal-link;`로 클릭 이동을 허용한다.
 - SVG·HTML은 Mermaid로 표현할 수 없을 때만 쓰고, SVG는 독립 `.svg` 파일로 두며 외부 리소스·스크립트를 넣지 않는다.
 - **SVG·이미지 파일은 `wiki/attachments/`에 둔다**(2026-10-14 신설, Obsidian 첨부파일 위치도 같은 폴더). 파일명은 문서와 같이 전역 유일한 kebab-case로 쓰고, 정본 문서에서 `![[파일명.svg]]`로 삽입한다. 외부 LLM이 만든 차트는 **좌표를 역산해 본문 수치와 대조한 뒤에만** 넣는다. HTML 보고서는 위키에 두지 않는다(원본은 raw에 보관).
+- **법령 수치 그래프는 손으로 그리지 않는다.** `automation/publish/charts/make_charts.py`가 조문 수치에서 좌표를 계산해 `wiki/attachments/`에 SVG를 만든다. 스크립트에 근거 조문과 자체 검산(예: 누진 기준금액 일치)을 함께 둔다.
+
+#### HTML 학습본 (2026-10-14 신설)
+
+- 개인 복습·인쇄용 HTML은 `python automation/publish/build_html.py` 한 줄로 `exports/html/`에 **재생성**한다. 대상은 topics·practice·notes·business·entities이고 sources는 제외한다.
+- **Markdown이 유일한 정본이다.** HTML은 git에서 제외한 출력물이며, HTML을 고쳐 위키에 역반영하지 않는다. 위키를 고친 뒤 다시 생성한다.
+- 변환 후 `python automation/publish/verify_html.py`로 낱말 누락·표·Callout·위키링크·제목·체크박스 개수·남은 Markdown 문법·깨진 경로를 대조한다.
+- Mermaid·MathJax는 `automation/publish/vendor/`의 고정 버전(mermaid 10.9.1, MathJax 3.2.2)을 쓴다. 없으면 빌드가 한 번 내려받는다. 필요한 Python 패키지는 `markdown` 하나다.
+- HTML은 표지를 배지로 표시한다(`[원문 확인 필요]` 계열 = 확인 필요, `[강사견해]` = 강사 견해, `[LLM 해석]`, `[개정안]`). 문서 상단 상태 줄에서 개수를 보고 눌러서 위치로 이동한다.
 - 일괄 변환·대량 디자인 수정은 사용자 지시가 있을 때만 하고, 수정 전 백업(`.design-backup/`, `.bak`)과 원본 대조 검증(본문·숫자·링크·제목·표·코드·frontmatter·줄바꿈 동일)을 거친다.
 
 ---

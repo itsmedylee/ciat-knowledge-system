@@ -29,3 +29,7 @@ cookies*.txt
 automation/law/.cache/
 automation/law/oc.txt
 .design-backup/
+
+# HTML 학습본 (automation/publish: 위키에서 재생성하는 출력물)
+exports/
+automation/publish/vendor/
