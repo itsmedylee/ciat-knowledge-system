@@ -2227,6 +2227,61 @@
       "last_attempt": "2026-10-14T00:48:35+09:00",
       "file": null,
       "last_error": "duration 68s"
+    },
+    "fYxlDKm_VfA": {
+      "channel": "상속마스터 정변",
+      "title": "아파트 상속받은 다음 달, 어머니 건보료 고지서가 나오는 이유 #상속전문변호사",
+      "published": "2026-10-22",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-25T02:55:56+09:00",
+      "last_attempt": "2026-10-25T02:55:56+09:00",
+      "file": null,
+      "last_error": "duration 72s"
+    },
+    "zeYq-nRVVb4": {
+      "channel": "상속마스터 정변",
+      "title": "상속법 개정 유언장 없으면 벌어지는 일 #상속전문변호사",
+      "published": "2026-10-21",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-25T02:55:59+09:00",
+      "last_attempt": "2026-10-25T02:55:59+09:00",
+      "file": null,
+      "last_error": "duration 84s"
+    },
+    "zZEA5c9uaDI": {
+      "channel": "상속마스터 정변",
+      "title": "아버지 돌아가시면 어머니 국민연금, 이거 잘못 고르면 매달 손해입니다. #상속전문변호사",
+      "published": "2026-10-18",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-25T02:56:01+09:00",
+      "last_attempt": "2026-10-25T02:56:01+09:00",
+      "file": null,
+      "last_error": "duration 71s"
+    },
+    "dkAcwAfTmd0": {
+      "channel": "상속마스터 정변",
+      "title": "부모님 돌아가신 날 계좌 싹 막히고 빚 5억까지 내 겁니다. 3개월 안에 이 1가지 안 하면 못 바꿉니다 #상속전문변호사",
+      "published": "2026-10-15",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-25T02:56:04+09:00",
+      "last_attempt": "2026-10-25T02:56:04+09:00",
+      "file": null,
+      "last_error": "duration 70s"
+    },
+    "fdzLwQCdMBM": {
+      "channel": "상속마스터 정변",
+      "title": "서울에서 집 한 채 상속세 얼마? #상속전문변호사",
+      "published": "2026-10-14",
+      "status": "skipped",
+      "attempts": 0,
+      "first_seen": "2026-10-25T02:56:07+09:00",
+      "last_attempt": "2026-10-25T02:56:07+09:00",
+      "file": null,
+      "last_error": "duration 74s"
     }
   }
 }

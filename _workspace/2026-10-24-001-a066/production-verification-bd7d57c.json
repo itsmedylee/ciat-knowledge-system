@@ -1,0 +1,11 @@
+{
+  "origin": "https://ciatpartners.com",
+  "serviceStatus": 200,
+  "faq": 12,
+  "ids": 37,
+  "links": 89,
+  "homeAndServiceLinks": true,
+  "contactOption": true,
+  "faqVisibleSchemaLlmsMatch": true,
+  "humanizedCopyLive": true
+}

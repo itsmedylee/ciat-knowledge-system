@@ -1,0 +1,110 @@
+{
+  "verdict": "corrected",
+  "fidelity": {
+    "pass": true,
+    "checks": [
+      {
+        "item": 1,
+        "check": "사실·주장·수치·날짜·고유명사·핵심 내용 어휘 보존",
+        "pass": true
+      },
+      {
+        "item": 2,
+        "check": "정보 누락 없음",
+        "pass": true
+      },
+      {
+        "item": 3,
+        "check": "원문에 없는 주장 주입 없음",
+        "pass": true
+      },
+      {
+        "item": 4,
+        "check": "인과·조건·시간 순서 보존",
+        "pass": true
+      },
+      {
+        "item": 5,
+        "check": "큰따옴표 인용 내부 불변",
+        "pass": true
+      },
+      {
+        "item": 6,
+        "check": "법률 조문·학술 개념어 원형 보존",
+        "pass": true
+      },
+      {
+        "item": 7,
+        "check": "수치·단위 보존",
+        "pass": true
+      },
+      {
+        "item": 8,
+        "check": "부정·긍정 반전 없음",
+        "pass": true
+      },
+      {
+        "item": 9,
+        "check": "주어·객체 관계 보존",
+        "pass": true
+      },
+      {
+        "item": 10,
+        "check": "한정사 범위 보존",
+        "pass": true
+      },
+      {
+        "item": 11,
+        "check": "예시 보존",
+        "pass": true
+      },
+      {
+        "item": 12,
+        "check": "논리 연결어 의미 보존",
+        "pass": true
+      },
+      {
+        "item": 13,
+        "check": "톤·극성 보존",
+        "pass": true
+      },
+      {
+        "item": 14,
+        "check": "각주 위치·번호·개수·정의 보존",
+        "pass": true
+      },
+      {
+        "item": 15,
+        "check": "제목·소제목·번호 매김 독립성 및 COPY 순서 보존",
+        "pass": true
+      }
+    ],
+    "violations": [
+      {
+        "item": 12,
+        "span": "COPY_0181: 정산과 기부자 보고 법인세",
+        "action": "명사 보고 뒤 열거 쉼표 복원 → 정산과 기부자 보고, 법인세"
+      }
+    ]
+  },
+  "naturalness": {
+    "residual": [],
+    "over_polish": [],
+    "grade": "A",
+    "note": "공식 명칭·필수 전문용어·기관별 법률 조건 반복은 정확성에 필요한 표현이므로 문체 결함으로 보지 않음."
+  },
+  "corrections_applied": 1,
+  "structure": {
+    "copy_blocks": 359,
+    "protected_blocks": 75,
+    "edited_blocks": 24,
+    "unchanged_blocks": 335,
+    "order_preserved": true,
+    "protected_immutable": true
+  },
+  "self_check": {
+    "passed": 6,
+    "total": 6
+  },
+  "note": "원문과 최종본의 전체 COPY 블록을 직접 대조. 세 문장군의 국소 윤문과 실제 연결어미 뒤 쉼표 삭제를 승인. stripcommas --all의 명사 보고 오탐 1건만 본문 복원. 요약의 C-11 전후 예시·코드 SSOT 변경률 0.22%·실측 문자 수·등급 근거 갱신. 최종 변경률은 orchestrator가 재검증함."
+}

@@ -202,7 +202,7 @@ ledger가 raw와 어긋났다면 **raw 파일의 frontmatter가 정본**이다 �
 
 ```powershell
 $py   = "$env:LOCALAPPDATA\Programs\Python\Python312\pythonw.exe"
-$repo = "$env:USERPROFILE\OneDrive - 씨앗세무회계\0. LLM WIKI"
+$repo = "$env:USERPROFILE\OneDrive - 씨앗세무회계\0. CIAT WIKI"
 
 $action  = New-ScheduledTaskAction -Execute $py `
     -Argument "`"$repo\automation\youtube\youtube_watcher.py`"" `
@@ -217,7 +217,7 @@ $settings = New-ScheduledTaskSettingsSet `
     -AllowStartIfOnBatteries `
     -ExecutionTimeLimit (New-TimeSpan -Minutes 30)
 
-Register-ScheduledTask -TaskName "LLM-WIKI YouTube Watcher" `
+Register-ScheduledTask -TaskName "CIAT-WIKI YouTube Watcher" `
     -Action $action -Trigger $trigger -Settings $settings `
     -Description "다솔세무TV 등 감시 채널의 신규 영상 transcript를 raw/에 수집"
 ```
@@ -227,7 +227,7 @@ Register-ScheduledTask -TaskName "LLM-WIKI YouTube Watcher" `
 ### GUI로 등록
 
 1. `작업 스케줄러` → **작업 만들기**
-2. **일반**: 이름 `LLM-WIKI YouTube Watcher`, "사용자가 로그온할 때만 실행"
+2. **일반**: 이름 `CIAT-WIKI YouTube Watcher`, "사용자가 로그온할 때만 실행"
 3. **트리거**: 매주 → `월요일` `09:00` (반복 간격은 설정하지 않는다)
 4. **동작**: 프로그램 시작
    - 프로그램: `%LOCALAPPDATA%\Programs\Python\Python312\pythonw.exe`
@@ -239,7 +239,7 @@ Register-ScheduledTask -TaskName "LLM-WIKI YouTube Watcher" `
 ### 확인
 
 ```powershell
-Get-ScheduledTask -TaskName "LLM-WIKI YouTube Watcher" | Get-ScheduledTaskInfo
+Get-ScheduledTask -TaskName "CIAT-WIKI YouTube Watcher" | Get-ScheduledTaskInfo
 Get-Content "automation\youtube\logs\youtube-watcher.log" -Tail 30
 ```
 

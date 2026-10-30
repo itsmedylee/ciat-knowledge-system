@@ -28,7 +28,7 @@ _NS = {
     "media": "http://search.yahoo.com/mrss/",
 }
 _UC_RE = re.compile(r"(UC[0-9A-Za-z_-]{22})")
-_USER_AGENT = "Mozilla/5.0 (compatible; llm-wiki-youtube-watcher/1.0)"
+_USER_AGENT = "Mozilla/5.0 (compatible; ciat-wiki-youtube-watcher/1.0)"
 
 
 class ResolveError(Exception):
