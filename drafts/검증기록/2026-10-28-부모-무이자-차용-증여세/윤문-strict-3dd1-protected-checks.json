@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "headings": true,
+    "tables": true,
+    "hashtags": true,
+    "hashtag_count_20": true,
+    "urls": true,
+    "numeric_tokens": true,
+    "quoted_text": true,
+    "citations": true,
+    "reference_section": true,
+    "encoding": true,
+    "source_not_changed_concurrently": true,
+    "frontmatter_exact": true,
+    "internal_notes_exact": true
+  },
+  "all_passed": true,
+  "body_characters_before": 9894,
+  "body_characters_after": 9896
+}

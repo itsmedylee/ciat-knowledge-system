@@ -1,0 +1,48 @@
+[정량 사전 점수 v2.0 — v1.6 8지표(KatFish baseline) + v2.0 카운트형]
+risk_band: low  (score 2)
+route_hint: light  (권고 — 사용자·오케스트레이터가 무시 가능)
+route_reason: 카운트형 티 1건(라우터가 세는 항목 기준) · risk_band low — 단일 콜·최소 파이프라인 권장. 카운터 밖 티는 monolith 가 룰북으로 잡는다
+genre: essay
+char_count: 571
+
+[v1.6 지표]
+- comma_inclusion_rate: 0.25  (z=-0.08 vs essay 인간 baseline)
+- comma_usage_rate: 0.33  (z=-1.11 vs essay 인간 baseline)
+- ending_comma_rate: 0.00  (z=-0.52 vs essay 인간 baseline)
+- comma_segment_length: 7.56  (z=+1.53 vs essay 인간 baseline)  ★ S1 트리거
+- conclusion_pivot_count: 0
+- safe_balance_count: 0
+- hanja_nominalizer_density: 0.000  (z=-2.00 vs essay 인간 baseline)
+- lexical_diversity: 0.85  (z=+4.02 vs essay 인간 baseline)
+
+[v2.0 카운트형 지표 — 원값 / baseline calibration 전 z-score 해석 보류]
+- double_passive_count (이중 피동, 본진 A-8): 0
+- by_passive_count (~에 의해 피동, 본진 A-9): 0
+- pronoun_density (인칭 대명사 밀도, 본진 A-16): 0.000
+- have_make_literal_count (have/make 직역, 본진 A-7): 0
+- double_particle_count (이중 조사 결합, 본진 A-19): 0
+- relative_clause_nesting (관형절 3중+ 중첩 문장 수, 본진 A-18): 3
+- deul_overuse_rate ('-들' 남용률, 본진 A-17 hold): 0.000
+- 카운트 > 0 지표는 해당 본진 ID 처방(quick-rules.md·taxonomy)과 교차 확인 후 윤문할 것.
+
+[근거 사용 가이드]
+- 위 점수는 *근거 보조*다. 단독 판정 금지(보고서 명시).
+- z>1.0 지표는 quick-rules.md S1·S2 패턴과 교차 확인 후 윤문할 것.
+- ending_comma_rate가 ★ S1 트리거인 경우 C-11(연결어미 뒤 쉼표) 우선 손질.
+- conclusion_pivot 매치 토큰은 D-1·H-1 처방 적용 대상.
+
+[원문 시작]
+안녕하세요. 씨앗세무회계 이동열 회계사입니다.
+
+아까 상속세 신고와 관련하여 안내드린 내용을 일부 정정드립니다.
+
+관련 법령과 국세청 안내를 추가로 확인한 결과, 상속재산과 공제요건을 검토하여 납부할 상속세가 없는 경우에는 신고하지 않더라도 무신고·납부지연가산세 부담이 발생하지 않을 수 있습니다.
+
+일반적으로 피상속인이 국내 거주자이고 배우자 없이 자녀가 상속받는 경우에는 일괄공제 5억원을, 배우자와 자녀가 공동상속인인 경우에는 일괄공제와 배우자 상속공제를 합하여 10억원의 공제를 검토할 수 있습니다.
+
+다만 실제 판단에는 상속재산의 평가액, 사전증여, 보험금 등 상속재산에 포함되는 항목과 공제요건을 확인해야 합니다. 추후 누락재산이나 평가 차이 등으로 납부할 세액이 발생하면 가산세 부담이 생길 수 있습니다.
+
+아직 개별 재산내역을 확인하지 않았으므로 신고 여부를 확정적으로 말씀드리기는 어렵습니다. 다만 앞서 재산내역과 관계없이 반드시 신고해야 한다는 취지로 안내드린 부분은 정정드립니다. 신고 여부는 실제 재산내역과 신고의 실익을 확인한 뒤 판단하는 것이 적절합니다.
+
+혼선을 드려 죄송합니다. 감사합니다.
+[원문 끝]
