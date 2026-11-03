@@ -309,7 +309,7 @@ class Converter:
         h = re.sub(r"<table>", '<div class="tbl"><table>', h).replace("</table>", "</table></div>")
         h = re.sub(r"<li>\[( |x|X)\]\s?", lambda m: '<li class="task"><input type="checkbox" disabled'
                    + (" checked" if m.group(1).lower() == "x" else "") + "> ", h)
-        h = re.sub(r"<li><p>\[( |x|X)\]\s?", lambda m: '<li class="task"><p><input type="checkbox" disabled'
+        h = re.sub(r"<li>\s*<p>\[( |x|X)\]\s?", lambda m: '<li class="task"><p><input type="checkbox" disabled'
                    + (" checked" if m.group(1).lower() == "x" else "") + "> ", h)
         if toc:
             return h, md.toc_tokens
