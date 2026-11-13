@@ -109,11 +109,23 @@ channels:
 | `success` | 저장 완료 | 종결 |
 | `no_caption` | 자막 없음 | ✅ 30분 → 2h → 6h → 24h (최대 8회) |
 | `failed` | 네트워크·yt-dlp 오류 | ✅ 동일 백오프 |
-| `skipped` | Shorts·비공개·삭제 | `--force` 로만 |
+| `skipped` | Shorts·비공개·삭제·제목 기준 제외 | `--force` 로만 |
 | `baseline` | 최초 실행 시점 기존 영상 | `--backfill` 로만 |
 
 **`no_caption` 은 종결 상태가 아니다.** 업로드 직후 영상은 자동자막 생성에 수십 분~수
 시간이 걸리므로 반드시 재시도해야 한다.
+
+### 제목 기준 제외 (`title_filter`, 2026-11-13 추가)
+
+채널 항목에 `title_filter` 를 두면 자막을 받기 전에 제목만 보고 제외하고, ledger에
+`skipped` (`error: title filter: <낱말>`)로 남긴다. watcher·playlist_fetch 모두 적용된다.
+
+- `exclude`: 하나라도 들어 있으면 무조건 제외
+- `exclude_unless_keep`: 들어 있으면 제외하되, `keep_if` 낱말이 함께 있으면 받는다
+- `keep_if`: 세무 주제임을 보여 주는 낱말
+
+현재 `세금전문회계사김희연` 채널에만 설정되어 있다(사용자 지시: 재테크·브이로그·연금 영상 제외).
+제목만으로는 완벽하지 않으므로 남은 애매한 영상은 `/ingest` 때 판단한다.
 
 ---
 
@@ -151,6 +163,19 @@ python automation/youtube/status.py
 자동화가 필요해지면 **주 1회**로 등록한다. 그 이상 자주 돌릴 이유가 없다 — 수집한
 transcript는 어차피 수동 `/ingest` 를 거쳐야 지식이 되므로, 수집 주기를 가공 주기보다
 촘촘하게 잡아도 raw만 쌓일 뿐이다. rate limit 위험만 는다.
+
+### RSS 장애 시 동영상 탭 자동 대체 (2026-11-13 추가)
+
+2026-11부터 YouTube RSS(`feeds/videos.xml`)가 정상 채널에도 **404·500을 간헐적으로** 돌려준다.
+채널·실행마다 되다 안 되다 한다. 수집기 코드로 고칠 수 있는 문제가 아니므로 우회한다.
+
+- `youtube_watcher.py` 일반 실행: RSS가 실패하면 그 채널만 **채널 `/videos` 탭(Shorts 제외) 최신 30건**을
+  yt-dlp로 읽는다(`items_via_tab`). 탭 목록에는 게시일이 없어 baseline 날짜 비교를 못 하므로,
+  **ledger에 이미 있는 영상을 처음 만나는 지점까지만 신규**로 본다. 그보다 오래된 미기록 영상은 버린다.
+  30건 안에 이력 영상이 하나도 없으면 경고를 남기니 `--backfill` 을 검토한다.
+- `status.py`: RSS가 실패한 채널은 판정 `TAB` 과 "탭 기준 신규 N건"을 보여 준다.
+  탭 30건이 전부 미수집이면 `BACKFILL` 로 판정한다.
+- RSS가 되는 실행에서는 종전 방식 그대로다.
 
 ### ⚠️ RSS 창은 최신 15건뿐이다
 

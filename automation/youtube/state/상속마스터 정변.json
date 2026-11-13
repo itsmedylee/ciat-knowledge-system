@@ -2282,6 +2282,42 @@
       "last_attempt": "2026-10-25T02:56:07+09:00",
       "file": null,
       "last_error": "duration 74s"
+    },
+    "OEfKLZZACjU": {
+      "channel": "상속마스터 정변",
+      "title": "내 재산인데, 자식에게 꼭 물려줘야 할까요? (상속전문변호사)",
+      "published": "2026-10-27",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:50:44+09:00",
+      "last_attempt": "2026-11-13T10:50:44+09:00",
+      "file": "raw/유튜브 스터디/상속마스터 정변 유튜브 스터디/2026-10-27-내 재산인데, 자식에게 꼭 물려줘야 할까요 (상속전문변호사).md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "ULqYmaTM8ho": {
+      "channel": "상속마스터 정변",
+      "title": "죽은 줄 알았던 아버지가 돌아오면, 이미 쓴 유산도 돌려줘야 할까? (상속전문변호사)",
+      "published": "2026-11-03",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:50:46+09:00",
+      "last_attempt": "2026-11-13T10:50:46+09:00",
+      "file": "raw/유튜브 스터디/상속마스터 정변 유튜브 스터디/2026-11-03-죽은 줄 알았던 아버지가 돌아오면, 이미 쓴 유산도 돌려줘야 할까 (상속전문변호사).md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "y_sUqObXuzQ": {
+      "channel": "상속마스터 정변",
+      "title": "자녀 집값 보태주기 전, 얼마 줄지보다 먼저 정해야 할 것 (상속전문변호사)",
+      "published": "2026-11-10",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:50:48+09:00",
+      "last_attempt": "2026-11-13T10:50:48+09:00",
+      "file": "raw/유튜브 스터디/상속마스터 정변 유튜브 스터디/2026-11-10-자녀 집값 보태주기 전, 얼마 줄지보다 먼저 정해야 할 것 (상속전문변호사).md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
     }
   }
 }

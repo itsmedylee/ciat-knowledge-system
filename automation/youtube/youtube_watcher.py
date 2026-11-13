@@ -111,6 +111,21 @@ def _published_str(item_published: datetime, upload_date: str | None) -> str:
     return now_kst().strftime("%Y-%m-%d")
 
 
+def title_filter_hit(title: str, channel_cfg: dict) -> str | None:
+    """channels.yaml 의 title_filter 에 걸리면 걸린 낱말을, 아니면 None 을 돌려준다."""
+    tf = channel_cfg.get("title_filter") or {}
+    t = (title or "").casefold()
+    for kw in tf.get("exclude") or []:
+        if str(kw).casefold() in t:
+            return str(kw)
+    if any(str(k).casefold() in t for k in tf.get("keep_if") or []):
+        return None
+    for kw in tf.get("exclude_unless_keep") or []:
+        if str(kw).casefold() in t:
+            return str(kw)
+    return None
+
+
 def process_video(
     *,
     video_id: str,
@@ -125,6 +140,16 @@ def process_video(
     channel_name = channel_cfg["name"]
     timestamp_style = channel_cfg.get("timestamp_style", "prefix")
     min_duration = channel_cfg.get("min_duration_sec", 0)
+
+    # 제목 기준 정책 제외 — 자막을 받기 전에 판정한다 (channels.yaml title_filter)
+    hit = title_filter_hit(feed_title, channel_cfg)
+    if hit:
+        log.info("  · %s 제외(제목 '%s') — %s", video_id, hit, feed_title)
+        if not dry_run:
+            ledger.record(video_id, title=feed_title,
+                          published=_published_str(feed_published, None),
+                          status="skipped", error=f"title filter: {hit}")
+        return "skipped"
 
     if dry_run:
         log.info("  [DRY-RUN] 처리 예정: %s — %s", video_id, feed_title)
@@ -221,6 +246,37 @@ def _seal_baseline(ledger: Ledger, args: argparse.Namespace, name: str) -> None:
     log.info("[%s] baseline_at 확정 — 이후 일반 실행이 이력을 덮어쓰지 않는다", name)
 
 
+TAB_FALLBACK_LIMIT = 30
+
+
+def items_via_tab(channel_url: str, ledger: Ledger, limit: int = TAB_FALLBACK_LIMIT) -> list:
+    """RSS 장애 대체: 채널 /videos 탭(Shorts 제외)을 최신순으로 읽는다.
+
+    2026-11 YouTube RSS(feeds/videos.xml)가 정상 채널에도 404·500을 돌려주는 장애가
+    계속돼 추가했다. 탭 목록은 게시일을 주지 않으므로 baseline 날짜 비교를 쓸 수
+    없다. 대신 **ledger에 이미 있는 영상을 처음 만나는 지점까지만 신규**로 본다.
+    그 아래의 ledger 기록 영상은 재시도 판정을 위해 남기고, ledger에 없는 더 오래된
+    영상은 버린다(과거 영상을 신규로 오인해 대량 수집하지 않도록).
+    """
+    tab = fetch_recent_via_ytdlp(channel_url, limit)
+    out, seen_known = [], False
+    for item in tab:
+        if ledger.get(item.video_id):
+            seen_known = True
+            out.append(item)
+        elif not seen_known:
+            out.append(item)
+    if tab and not seen_known and ledger.all_items():
+        log.warning("  ⚠ 동영상 탭 최신 %d건 안에 수집 이력 영상이 없다 — 그 사이 영상이 더 있을 수 "
+                    "있으니 --backfill 을 검토한다", len(tab))
+    return out
+
+
+def _pub_str(item) -> str:
+    return (item.published.astimezone(KST).strftime("%Y-%m-%d")
+            if item.published.year > 1 else "")
+
+
 def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> dict:
     name = channel_cfg["name"]
     stats = {"success": 0, "no_caption": 0, "failed": 0, "skipped": 0,
@@ -255,8 +311,13 @@ def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> 
             items = fetch_recent_via_ytdlp(channel_cfg["url"], args.backfill)
             log.info("[%s] backfill 조회 %d건", name, len(items))
         else:
-            items = fetch_feed(channel_id)
-            log.debug("[%s] RSS %d건", name, len(items))
+            try:
+                items = fetch_feed(channel_id)
+                log.debug("[%s] RSS %d건", name, len(items))
+            except ResolveError as rss_exc:
+                log.warning("[%s] %s → 채널 동영상 탭으로 대체 조회", name, rss_exc)
+                items = items_via_tab(channel_cfg["url"], ledger)
+                log.info("[%s] 동영상 탭 조회 %d건(신규 판정 대상)", name, len(items))
     except ResolveError as exc:
         log.error("[%s] %s", name, exc)
         stats["channel_error"] = 1
@@ -267,7 +328,7 @@ def run_channel(channel_cfg: dict, args: argparse.Namespace, defaults: dict) -> 
         now = now_kst()
         for item in items:
             ledger.record(item.video_id, title=item.title,
-                          published=item.published.astimezone(KST).strftime("%Y-%m-%d"),
+                          published=_pub_str(item),
                           status="baseline")
             stats["baseline"] += 1
         ledger.set_baseline(now)

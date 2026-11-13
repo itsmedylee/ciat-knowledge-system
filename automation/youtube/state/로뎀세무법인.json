@@ -953,6 +953,42 @@
       "last_attempt": "2026-10-25T02:55:09+09:00",
       "file": null,
       "last_error": "duration 75s"
+    },
+    "Tlk_6Ys0aOU": {
+      "channel": "로뎀세무법인",
+      "title": "세무조사 나오면 반드시 확인하는 항목 | 법인 세무조사 대응방법",
+      "published": "2026-10-28",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:49:41+09:00",
+      "last_attempt": "2026-11-13T10:49:41+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-10-28-세무조사 나오면 반드시 확인하는 항목 법인 세무조사 대응방법.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "DC1VNiMZo3Y": {
+      "channel": "로뎀세무법인",
+      "title": "[최신개정세법] 종교단체 재정관리, 반드시 점검해야 할 5가지 | 선교비·사례금·현금 지출",
+      "published": "2026-11-04",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:49:43+09:00",
+      "last_attempt": "2026-11-13T10:49:43+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-11-04-최신개정세법 종교단체 재정관리, 반드시 점검해야 할 5가지 선교비·사례금·현금 지출.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
+    },
+    "4y3p_jOnUBU": {
+      "channel": "로뎀세무법인",
+      "title": "간이vs일반, 세금 아끼는 정답은? 계산기로 바로 확인해보세요.",
+      "published": "2026-11-11",
+      "status": "success",
+      "attempts": 0,
+      "first_seen": "2026-11-13T10:49:45+09:00",
+      "last_attempt": "2026-11-13T10:49:45+09:00",
+      "file": "raw/유튜브 스터디/로뎀세무법인 유튜브 스터디/2026-11-11-간이vs일반, 세금 아끼는 정답은 계산기로 바로 확인해보세요.md",
+      "language": "ko",
+      "transcript_source": "auto-caption"
     }
   }
 }

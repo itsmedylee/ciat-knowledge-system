@@ -23,7 +23,8 @@ from datetime import datetime
 from pathlib import Path
 
 from ledger import KST, Ledger
-from resolver import ChannelResolver, ResolveError, fetch_feed
+from resolver import ChannelResolver, ResolveError, fetch_feed, fetch_recent_via_ytdlp
+from youtube_watcher import TAB_FALLBACK_LIMIT
 from youtube_watcher import STATE_DIR, load_config
 
 
@@ -74,7 +75,29 @@ def main() -> int:
             channel_id = resolver.resolve(ch["url"])
             items = fetch_feed(channel_id)
         except (ResolveError, OSError) as exc:
-            rows.append((name, last or "-", "-", "?", "ERROR", str(exc)[:40]))
+            # RSS 장애(2026-11~) 대체: 동영상 탭으로 이력 영상까지의 신규 건수를 센다.
+            # youtube_watcher.py 일반 실행도 같은 방식으로 자동 전환한다.
+            try:
+                tab = fetch_recent_via_ytdlp(ch["url"], TAB_FALLBACK_LIMIT)
+            except ResolveError as tab_exc:
+                rows.append((name, last or "-", "-", "?", "ERROR",
+                             f"RSS·탭 모두 실패: {str(tab_exc)[:40]}"))
+                continue
+            new = 0
+            for it in tab:
+                if ledger.get(it.video_id):
+                    break
+                new += 1
+            else:
+                if tab and last is not None:
+                    rows.append((name, last, "동영상 탭", "-", "BACKFILL",
+                                 f"RSS 장애 · 탭 최신 {len(tab)}건이 전부 미수집"))
+                    actions.append(f'python automation/youtube/youtube_watcher.py --channel "{name}" --backfill 50')
+                    continue
+            note = f"RSS 장애({str(exc)[:20]}) → 탭 기준 신규 {new}건"
+            if pending:
+                note += f" · 재시도대기 {pending}건"
+            rows.append((name, last or "-", "동영상 탭", "-", "TAB", note))
             continue
 
         published = sorted(i.published for i in items if i.published.year > 1)
