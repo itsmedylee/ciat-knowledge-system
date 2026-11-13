@@ -1,0 +1,47 @@
+{
+  "genre": "blog",
+  "change_rate": {
+    "rate": 0.0007,
+    "scope": "전문",
+    "verdict": "OK"
+  },
+  "s1_targets": [
+    {
+      "metric": "ending_comma_rate",
+      "z_before": 2.56,
+      "z_after": -0.52,
+      "verdict": "달성"
+    }
+  ],
+  "antithesis": {
+    "before": 0,
+    "after": 0,
+    "verdict": "스킵 (원문 대구 < 5)"
+  },
+  "golden": [],
+  "sentence_touch": {
+    "rate": 0.0612,
+    "touched": 9,
+    "total": 147
+  },
+  "numbers_dropped": [],
+  "modality": {
+    "lost_pairs": [],
+    "uncertain_pairs": [],
+    "counts": {
+      "deontic": {
+        "before": 33,
+        "after": 33
+      },
+      "hedge": {
+        "before": 5,
+        "after": 5
+      }
+    },
+    "verdict": "OK"
+  },
+  "gate": {
+    "verdict": "OK — 수렴",
+    "exit_code": 0
+  }
+}

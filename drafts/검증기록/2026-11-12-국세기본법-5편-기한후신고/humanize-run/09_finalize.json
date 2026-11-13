@@ -1,0 +1,151 @@
+{
+  "verdict": "corrected",
+  "fidelity": {
+    "pass": true,
+    "violations": [
+      {
+        "item": 1,
+        "span": "표 안 쉼표 4곳",
+        "action": "표 문구 원형 보존을 위해 복원 완료"
+      }
+    ],
+    "reviewed_items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "details": "법리·주장·정보·수치·날짜·내용 명사·조건·인과·시간 순서·부정/긍정·주체/객체·한정 범위·예시·논리 연결·경어체·요구/유보 수위를 전체 직접 대조. 제목·소제목·번호·표·링크·해시태그 보존."
+  },
+  "naturalness": {
+    "residual": [
+      {
+        "id": "A-18",
+        "note": "법정 요건의 수식은 대상과 적용 범위 보존을 위해 유지."
+      },
+      {
+        "id": "I-4",
+        "note": "확인·검토 권유는 독자 행동과 요구 수위 보존을 위해 유지."
+      }
+    ],
+    "over_polish": [
+      {
+        "type": "보존 대상 쉼표 삭제",
+        "span": "표 4곳·비대상 본문 4곳",
+        "action": "원문 복원"
+      }
+    ]
+  },
+  "corrections_applied": 8,
+  "gate_warning_review": {
+    "verdict": "false_positive",
+    "warning": "각주 2)의 인접 수치 앵커 47 → 45",
+    "evidence": "원문과 최종본에 실제 각주 정의·참조는 없고, 관련 법령 Markdown 조문 링크에 닫는 괄호 앞 2)가 나타난다. 모든 링크 문자열·순서·행번호가 원문과 동일하므로 각주나 조문 출처의 이동이 아니다. 링크 위치 전수 대조 결과와 탐지 코드 발췌를 첨부한다.",
+    "link_tokens_equal": true,
+    "link_positions": [
+      {
+        "token": "[씨앗세무회계 요금 안내](https://ciatpartners.com/pricing/)",
+        "original_line": 136,
+        "final_line": 136
+      },
+      {
+        "token": "[국세기본법 제22조](https://www.law.go.kr/법령/국세기본법/제22조)",
+        "original_line": 140,
+        "final_line": 140
+      },
+      {
+        "token": "[제47조의5](https://www.law.go.kr/법령/국세기본법/제47조의5)",
+        "original_line": 140,
+        "final_line": 140
+      },
+      {
+        "token": "[국세기본법 제45조의3](https://www.law.go.kr/법령/국세기본법/제45조의3)",
+        "original_line": 142,
+        "final_line": 142
+      },
+      {
+        "token": "[제45조](https://www.law.go.kr/법령/국세기본법/제45조)",
+        "original_line": 142,
+        "final_line": 142
+      },
+      {
+        "token": "[제45조의2](https://www.law.go.kr/법령/국세기본법/제45조의2)",
+        "original_line": 142,
+        "final_line": 142
+      },
+      {
+        "token": "[제47조의2](https://www.law.go.kr/법령/국세기본법/제47조의2)",
+        "original_line": 142,
+        "final_line": 142
+      },
+      {
+        "token": "[제47조의4](https://www.law.go.kr/법령/국세기본법/제47조의4)",
+        "original_line": 142,
+        "final_line": 142
+      },
+      {
+        "token": "[제48조](https://www.law.go.kr/법령/국세기본법/제48조)",
+        "original_line": 142,
+        "final_line": 142
+      }
+    ],
+    "checks_source_excerpt": "            fails.append(Failure(\n                \"heading_lost\",\n                f\"제목 '{line}'이 윤문본에서 사라졌습니다\",\n            ))\n    return fails\n\n\n# Inline marker: digits + ')' ATTACHED to the preceding character\n# (\"...증가했다.1)\"). A space-preceded or line-leading \"N) \" is a footnote\n# DEFINITION label, not an inline marker. '(3)' style headings are excluded\n# by the '(' lookbehind; '(2024)' style years by the digit lookbehind.\n_INLINE_MARKER = re.compile(r\"(?<=\\S)(?<![(\\d])(\\d{1,3})\\)\")\n_DEF_LABEL = re.compile(r\"(?:^|(?<=\\s))(\\d{1,3})\\)\\s\")\n_NUM_TOKEN = re.compile(r\"\\d+(?:[.,]\\d+)*\")\n\nANCHOR_WINDOW = 50  # chars scanned backwards from a marker for its anchor number\n\n\ndef extract_inline_markers(text: str) -> list[tuple[str, int]]:\n    \"\"\"Return [(footnote_number, absolute_position), ...] in document order.\"\"\"\n    markers = []\n    offset = 0\n    for line in text.splitlines(keepends=True):\n        if not _DEF_LINE.match(line):\n            for m in _INLINE_MARKER.finditer(line):\n                markers.append((m.group(1), offset + m.start(1)))\n        offset += len(line)\n    return markers\n\n\ndef extract_defs(text: str) -> dict[str, str]:\n    \"\"\"Return {footnote_number: normalized_definition_content}.\n\n    Handles both one-definition-per-line and (broken) merged lines, so the\n    content-identity check still works on merged-but-verbatim definitions.\n    \"\"\"\n    defs: dict[str, str] = {}\n    for line in text.splitlines():\n        if not _DEF_LINE.match(line):\n            continue\n        labels = [(m.start(), m.group(1)) for m in _DEF_LABEL.finditer(line)]\n        for i, (pos, num) in enumerate(labels):\n            end = labels[i + 1][0] if i + 1 < len(labels) else len(line)\n            content = re.sub(r\"^\\s*\\d{1,3}\\)\\s*\", \"\", line[pos:end])\n            defs[num] = _norm_ws(content)\n    return defs\n\n\ndef _nearest_num_before(text: str, pos: int) -> str | None:\n    seg = text[max(0, pos - ANCHOR_WINDOW):pos]\n    nums = _NUM_TOKEN.findall(seg)\n    return nums[-1] if nums else None\n\n\ndef check_footnotes(original: str, output: str) -> list[Failure]:\n    fails: list[Failure] = []\n    in_markers = extract_inline_markers(original)\n    out_markers = extract_inline_markers(output)\n    if not in_markers and not extract_defs(original):\n        return fails  # original has no footnotes; nothing to protect\n\n    if len(out_markers) < len(in_markers):\n        fails.append(Failure(\n            \"footnote_count\",\n            f\"본문 각주 표시가 {len(in_markers)}개 → {len(out_markers)}개로 줄었습니다\",\n        ))\n\n    in_nums = {n for n, _ in in_markers}\n    out_nums = {n for n, _ in out_markers}\n    if in_nums != out_nums:\n        missing = sorted(in_nums - out_nums, key=int)\n        invented = sorted(out_nums - in_nums, key=int)\n        parts = []\n        if missing:\n            parts.append(f\"소실 {missing}\")\n        if invented:\n            parts.append(f\"신규 {invented}\")\n        fails.append(Failure(\n            \"footnote_numbers\",\n            f\"각주 번호 집합이 달라졌습니다: {', '.join(parts)}\",\n        ))\n\n    # Anchor check: a marker must stay attached to the same sentence.\n    # Proxy: the nearest number token within ANCHOR_WINDOW chars before the\n    # marker (numbers are immutable under the skill's iron rules, so they\n    # survive a legitimate rewrite). Markers with no nearby number in the\n    # original are skipped — count/set checks still cover their existence.\n    out_first_pos = {}\n    for n, p in out_markers:\n        out_first_pos.setdefault(n, p)\n    for num, pos in in_markers:\n        anchor = _nearest_num_before(original, pos)\n        if anchor is None or num not in out_first_pos:\n            continue\n        out_anchor = _nearest_num_before(output, out_first_pos[num])\n        if out_anchor != anchor:\n            fails.append(Failure(\n                \"footnote_anchor\",\n                f\"각주 {num})이 원위치를 벗어났습니다 \"\n                f\"(인접 수치 앵커 '{anchor}' → '{out_anchor}'): 인용 출처 변조 위험\",\n            ))\n\n    in_defs = extract_defs(original)\n    out_defs = extract_defs(output)\n    for num, content in in_defs.items():",
+    "identical_input_reproduction": [
+      {
+        "code": "footnote_anchor",
+        "message": "각주 2)이 원위치를 벗어났습니다 (인접 수치 앵커 '47' → '45'): 인용 출처 변조 위험"
+      }
+    ],
+    "final_reproduction": [
+      {
+        "code": "footnote_anchor",
+        "message": "각주 2)이 원위치를 벗어났습니다 (인접 수치 앵커 '47' → '45'): 인용 출처 변조 위험"
+      }
+    ],
+    "marker_contexts": [
+      {
+        "number": "5",
+        "preceding_context": "령/국세기본법/제22조), [제47조의5](https://www.law.go.kr/법령/국세기본법/제47조의5)",
+        "nearest_number": "47",
+        "original_line": 140
+      },
+      {
+        "number": "3",
+        "preceding_context": "7조의5)\n\n- [국세기본법 제45조의3](https://www.law.go.kr/법령/국세기본법/제45조의3)",
+        "nearest_number": "45",
+        "original_line": 142
+      },
+      {
+        "number": "2",
+        "preceding_context": "령/국세기본법/제45조), [제45조의2](https://www.law.go.kr/법령/국세기본법/제45조의2)",
+        "nearest_number": "45",
+        "original_line": 142
+      },
+      {
+        "number": "2",
+        "preceding_context": "국세기본법/제45조의2), [제47조의2](https://www.law.go.kr/법령/국세기본법/제47조의2)",
+        "nearest_number": "47",
+        "original_line": 142
+      },
+      {
+        "number": "4",
+        "preceding_context": "국세기본법/제47조의2), [제47조의4](https://www.law.go.kr/법령/국세기본법/제47조의4)",
+        "nearest_number": "47",
+        "original_line": 142
+      }
+    ],
+    "root_cause": "Markdown URL 말미의 제45조의2)와 제47조의2)를 각각 같은 각주 2)로 오인한다. check_footnotes의 out_first_pos.setdefault는 같은 번호를 최초 위치(45)로만 고정하여 두 번째 원문 marker의 인접 수치 47과 비교한다. 원문을 자기 자신과 비교해도 동일한 47→45 경고가 재현된다. 실제 이동이 아니다."
+  },
+  "note": "전체 직접 대조 후 표 4곳·비대상 본문 4곳 쉼표 국소 복원. 승인된 변경은 진단의 쉼표 3곳. final_pre_finalize.md 백업 보존. 최종 변경률과 각주 경고는 후속 게이트에서 재실행 필요."
+}

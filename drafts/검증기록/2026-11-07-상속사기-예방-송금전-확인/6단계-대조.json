@@ -1,0 +1,10 @@
+{
+  "numbers": true,
+  "links": true,
+  "headings": true,
+  "table_rows": true,
+  "law": true,
+  "hashtags": true,
+  "checkboxes": true,
+  "emdash_count": 0
+}

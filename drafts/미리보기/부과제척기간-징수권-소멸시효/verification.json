@@ -1,0 +1,17 @@
+{
+  "source_sha256": "e8f85f4f8a618f7f61f370cf0d67a60f0a72f8afcdba31da1c4de58dd72baa00",
+  "sections": 10,
+  "svg_count": 5,
+  "self_contained": true,
+  "internal_notes_excluded": true,
+  "tables": 4,
+  "source_text_exact_match": true,
+  "source_numbers_preserved": true,
+  "section_headings_preserved": true,
+  "unique_element_ids": true,
+  "svg_xml_valid": true,
+  "source_links_present": true,
+  "responsive_styles": true,
+  "print_styles": true,
+  "browser_visual_check": "not performed - browser access host unavailable"
+}

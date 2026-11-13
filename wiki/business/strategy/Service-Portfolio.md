@@ -3,9 +3,10 @@ title: Service Portfolio (서비스 포트폴리오)
 type: business
 business_type: strategy
 created: 2026-08-10
-updated: 2026-10-16
+updated: 2026-11-13
 status: draft
 tags: [strategy, service-portfolio, 상품화]
+sources: []
 ---
 
 # Service Portfolio: 서비스 포트폴리오

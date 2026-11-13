@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "one_h1": true,
+    "unique_ids": true,
+    "local_anchors": true,
+    "all_eight_sections": true,
+    "three_diagrams": true,
+    "no_internal_notes": true,
+    "no_next_asset_dependencies": true,
+    "no_hydration_scripts": true,
+    "noindex": true,
+    "case_citations": true,
+    "legal_limits": true,
+    "part_two_link": true,
+    "list_registration": true,
+    "part_two_backlink": true,
+    "sitemap": true,
+    "llms_full": true
+  },
+  "browser_visual_check": "not_available_browser_access_host_unavailable"
+}

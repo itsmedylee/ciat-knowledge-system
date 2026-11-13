@@ -1,0 +1,11 @@
+{
+  "edits": 0,
+  "reason": "처음부터 fluent-korean 기준으로 집필했고 편집 검토까지 마친 본문을 문단별 점검했으며 추가 기준 위반이 없어 유지했습니다.",
+  "numbers": true,
+  "links": true,
+  "headings": true,
+  "tables": true,
+  "articles": true,
+  "hashtags": true,
+  "emdash": 0
+}

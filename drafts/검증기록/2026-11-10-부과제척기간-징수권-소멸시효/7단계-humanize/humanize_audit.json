@@ -1,0 +1,9 @@
+{
+  "numbers": true,
+  "laws": true,
+  "cases": true,
+  "links": true,
+  "headings": true,
+  "tables": true,
+  "quotes": true
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "part": 3,
+    "file": "2026-11-12-국세기본법-3편-수정신고.md",
+    "sha256": "0820675fc9d797ed0108f441201294c663a2c3af53f48c3d407bf5689ae29c4b",
+    "body_characters": 6746,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 1,
+    "finalize_done": true
+  },
+  {
+    "part": 4,
+    "file": "2026-11-12-국세기본법-4편-경정청구.md",
+    "sha256": "9297cbcfe92ab8e8a5d9ebf221f95a8e70fdc09c13cd7bff370f5fd655445578",
+    "body_characters": 6178,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 0,
+    "finalize_done": false
+  },
+  {
+    "part": 5,
+    "file": "2026-11-12-국세기본법-5편-기한후신고.md",
+    "sha256": "7214d790224c1f95a3a503dad548ce9ae39dca0f5a548ebbd15f569717418a1d",
+    "body_characters": 5971,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 1,
+    "finalize_done": true
+  },
+  {
+    "part": 6,
+    "file": "2026-11-12-국세기본법-6편-가산세.md",
+    "sha256": "015425f21d01b087a84a7729ec496fd1603af425400255e699ca60d93adb26ae",
+    "body_characters": 6081,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 0,
+    "finalize_done": false
+  },
+  {
+    "part": 7,
+    "file": "2026-11-12-국세기본법-7편-세무조사-납세자권리.md",
+    "sha256": "76ad1dec60cc985cb52aa83759f0b20c383f5d6593b25f310b25e8dd8b2839ca",
+    "body_characters": 6040,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 0,
+    "finalize_done": false
+  },
+  {
+    "part": 8,
+    "file": "2026-11-12-국세기본법-8편-국세불복-권리구제.md",
+    "sha256": "1c6a4fbcc71bc99015dbe46184ba58e2ddd684c101cdfe164e7c63855fc21429",
+    "body_characters": 6202,
+    "content_words_preserved": true,
+    "sections": 10,
+    "hashtags": 20,
+    "legal_verdict": "PASS",
+    "gate_exit": 0,
+    "finalize_done": false,
+    "humanize_round": 2,
+    "redo_gate_exit": 0
+  }
+]

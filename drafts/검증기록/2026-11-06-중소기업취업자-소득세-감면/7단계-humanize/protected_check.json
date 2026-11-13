@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": {
+    "numbers": true,
+    "laws": true,
+    "citations": true,
+    "links": true,
+    "headings": true,
+    "tables": true,
+    "hashtags": true,
+    "checkboxes": true,
+    "blockquotes": true,
+    "quotes": true,
+    "parentheses": true
+  },
+  "emdash": 0
+}

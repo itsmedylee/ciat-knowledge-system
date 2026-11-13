@@ -1,0 +1,116 @@
+{
+  "genre": "blog",
+  "change_rate": {
+    "rate": 0.0002,
+    "scope": "전문",
+    "verdict": "OK"
+  },
+  "s1_targets": [
+    {
+      "metric": "ending_comma_rate",
+      "z_before": 3.83,
+      "z_after": 2.52,
+      "verdict": "미달"
+    }
+  ],
+  "antithesis": {
+    "before": 4,
+    "after": 4,
+    "verdict": "스킵 (원문 대구 < 5)"
+  },
+  "golden": [
+    {
+      "code": "footnote_anchor",
+      "message": "각주 500)이 원위치를 벗어났습니다 (인접 수치 앵커 '1,762' → '3,802'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 500)이 원위치를 벗어났습니다 (인접 수치 앵커 '1,762' → '3,802'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 8)이 원위치를 벗어났습니다 (인접 수치 앵커 '29' → '2024'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 29)이 원위치를 벗어났습니다 (인접 수치 앵커 '19' → 'None'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 2)이 원위치를 벗어났습니다 (인접 수치 앵커 '11' → '45'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 3)이 원위치를 벗어났습니다 (인접 수치 앵커 '11' → '12'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 3)이 원위치를 벗어났습니다 (인접 수치 앵커 '1' → '12'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '2' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '3' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '4' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '5' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '6' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '7' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '8' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '9' → '012.8.17'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 5)이 원위치를 벗어났습니다 (인접 수치 앵커 '10' → '47'): 인용 출처 변조 위험"
+    },
+    {
+      "code": "footnote_anchor",
+      "message": "각주 4)이 원위치를 벗어났습니다 (인접 수치 앵커 '2012.8.17' → '012.8.17'): 인용 출처 변조 위험"
+    }
+  ],
+  "sentence_touch": {
+    "rate": 0.019,
+    "touched": 12,
+    "total": 633
+  },
+  "numbers_dropped": [],
+  "modality": {
+    "lost_pairs": [],
+    "uncertain_pairs": [],
+    "counts": {
+      "deontic": {
+        "before": 31,
+        "after": 31
+      },
+      "hedge": {
+        "before": 36,
+        "after": 36
+      }
+    },
+    "verdict": "OK"
+  },
+  "gate": {
+    "verdict": "WARN — 경고. 사용자 고지 + finalize 승급",
+    "exit_code": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "numbers": true,
+  "law": true,
+  "links": true,
+  "headings": true,
+  "tables": true,
+  "hashtags": true,
+  "quotes": true,
+  "emdash_zero": true,
+  "ten_sections": true,
+  "twenty_hashtags": true,
+  "no_foreign_mixture": true
+}

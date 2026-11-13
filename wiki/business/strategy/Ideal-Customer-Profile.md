@@ -3,8 +3,9 @@ title: Ideal Customer Profile (이상적 고객 프로파일)
 type: business
 business_type: strategy
 created: 2026-08-10
-updated: 2026-10-23
+updated: 2026-11-13
 tags: [strategy, ICP, 타깃고객, 포지셔닝]
+sources: []
 ---
 
 # Ideal Customer Profile (ICP): 이상적 고객 프로파일

@@ -1,0 +1,70 @@
+{
+  "verdict": "accept",
+  "fidelity": {
+    "pass": true,
+    "violations": [],
+    "checked_items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "comparison": "원문과 윤문본 554개 줄을 직접 대조했다. 본문 차이는 쉼표 12개 삭제뿐이며 모든 다른 문자와 순서가 동일하다. 사실·주장·수치·날짜·고유명사·개념어·예시·인용·법령·시간·조건·주체·부정긍정·한정범위·논리관계·톤·각주·제목 독립성에 변동이 없다."
+  },
+  "naturalness": {
+    "residual": [
+      {
+        "id": "C-11",
+        "note": "표면 후보 28개는 표·인용·출처 또는 조건·예외·병렬·주체 경계를 표시하여 보존했다. 취업 당시와 소득 발생 기간, 통지 후 재직자와 퇴직자 등 법적 경계를 검토했다. 정량 목표에 맞추기 위한 추가 삭제는 하지 않는다."
+      },
+      {
+        "id": "A-18/C-8",
+        "note": "관형절은 법적 기간·대상을 한정하고 교정형 대조는 오해를 바로잡으므로 보존한다."
+      }
+    ],
+    "over_polish": []
+  },
+  "corrections_applied": 0,
+  "approved_body_edits": 12,
+  "metadata_corrections_applied": [
+    "변경률 0.02% 확정",
+    "highlights before 원문 쉼표 4개 복원",
+    "등급 B 사유와 원시 게이트 WARN 명시"
+  ],
+  "protected_items": {
+    "pass": true,
+    "checks": {
+      "numbers": true,
+      "laws": true,
+      "citations": true,
+      "links": true,
+      "headings": true,
+      "tables": true,
+      "hashtags": true,
+      "checkboxes": true,
+      "blockquotes": true,
+      "quotes": true,
+      "parentheses": true
+    },
+    "emdash": 0
+  },
+  "gate": {
+    "verdict": "WARN",
+    "exit_code": 1,
+    "rate": 0.0002,
+    "footnote_anchor_warnings": 17,
+    "identical_input_warning_match": true
+  },
+  "note": "쉼표 삭제 12개를 승인하며 추가 본문 보정은 0건이다. 같은 주체의 연결절 또는 문법 관계가 명시된 위치의 쉼표이므로 의무·가능·유보·예외 범위와 시점을 바꾸지 않는다. 잔존 쉼표의 조건·예외·병렬·주체 경계 기능을 검토했다. 0~13절 한다체·14절 합쇼체는 의도된 구분이다. 격식 상향·상투구·비유 주입이 없다. 보호항목 11종이 통과했고 실제 제목·숫자·인용·표·각주 이동이 없다. 원시 게이트는 통과가 아닌 WARN(exit 1)이다. footnote_anchor 17건은 원문↔원문 동일입력에서도 메시지까지 동일하게 재현되며 금액 500) 및 조문·시행일 괄호 등을 각주로 오인한 경고다. 경고 때문에 본문을 고치지 않았다. 쉼표목표 미달(z 3.83→2.52)은 보호항목 보존을 우선해 수용한다. 등급 B는 넓은 법률 보호범위에 따른 보수적 윤문을 뜻한다."
+}

@@ -1,0 +1,108 @@
+{
+  "version": "v2.0",
+  "genre": "blog",
+  "char_count": 10521,
+  "metrics": {
+    "comma_inclusion_rate": 0.12411347517730496,
+    "comma_usage_rate": 0.15602836879432624,
+    "ending_comma_rate": 0.1267605633802817,
+    "comma_segment_length": 7.199386503067485,
+    "conclusion_pivot_count": 5,
+    "safe_balance_count": 0,
+    "hanja_nominalizer_density": 0.0,
+    "lexical_diversity": 0.5232158211521926
+  },
+  "z_scores": {
+    "comma_inclusion_rate": -0.8006136222505474,
+    "comma_usage_rate": -1.3621980856023406,
+    "ending_comma_rate": 1.0904076717136897,
+    "comma_segment_length": 1.353627792431109,
+    "hanja_nominalizer_density": -2.0,
+    "lexical_diversity": -2.5356835769561497
+  },
+  "risk_band": "medium",
+  "risk_score": 5,
+  "evidence": {
+    "conclusion_pivots": [
+      "따라서"
+    ],
+    "safe_balances": []
+  },
+  "warning": "baseline_genre_null:blog->essay",
+  "v2_metrics": {
+    "lexical_diversity_ttr": 0.5232158211521926,
+    "lexical_density": 0.06061908856405847,
+    "ending_diversity": 0.22330097087378642,
+    "normalisation_score": 0.2730496453900709,
+    "da_streak_rate": 17,
+    "inanimate_subject_rate": 0.0,
+    "by_passive_count": 0,
+    "double_passive_count": 0,
+    "pronoun_density": 0.0002918004085205719,
+    "deul_overuse_rate": 0.0,
+    "relative_clause_nesting": 35,
+    "have_make_literal_count": 0,
+    "double_particle_count": 0,
+    "progressive_aspect_rate": 0.02127659574468085,
+    "antithesis_count": 1
+  },
+  "v2_interference_index": {
+    "components": {
+      "T1_inanimate_subject_rate": 0.0,
+      "T2a_by_passive_per_1k": 0.0,
+      "T2b_double_passive_per_1k": 0.0,
+      "T3_pronoun_density": 0.0002918004085205719,
+      "T4_deul_overuse_rate": 0.0,
+      "T5_nested_clause_count": 35,
+      "T6_have_make_per_1k": 0.0,
+      "T7_double_particle_per_1k": 0.0,
+      "T8b_progressive_rate": 0.02127659574468085
+    },
+    "weighted_total": 1.022443797378763,
+    "n_sentences": 282,
+    "n_chars": 10521
+  },
+  "v2_z_scores": {
+    "lexical_diversity_ttr": -0.9598022355975927,
+    "lexical_density": -2.6172613929492696,
+    "ending_diversity": -3.5558252427184467,
+    "normalisation_score": -0.7052797478329395,
+    "da_streak_rate": 27.833333333333332,
+    "inanimate_subject_rate": -1.3333333333333335,
+    "by_passive_count": -0.4285714285714286,
+    "double_passive_count": -0.4,
+    "pronoun_density": -1.475683299289952,
+    "deul_overuse_rate": -0.5714285714285714,
+    "relative_clause_nesting": 86.99999999999999,
+    "have_make_literal_count": -0.4285714285714286,
+    "double_particle_count": -0.4,
+    "progressive_aspect_rate": -0.9872340425531914,
+    "antithesis_count": null
+  },
+  "v2_baseline_warnings": [
+    "lexical_diversity_ttr",
+    "lexical_density",
+    "ending_diversity",
+    "normalisation_score",
+    "da_streak_rate",
+    "inanimate_subject_rate",
+    "by_passive_count",
+    "double_passive_count",
+    "pronoun_density",
+    "deul_overuse_rate",
+    "relative_clause_nesting",
+    "have_make_literal_count",
+    "double_particle_count",
+    "progressive_aspect_rate"
+  ],
+  "route_hint": "standard",
+  "route_reason": "카운트형 티 6건 · risk_band medium — 진단 + 단일 윤문 권장",
+  "route_signals": {
+    "lexical_tell_count": 6,
+    "v26_tells": {
+      "은유가족(D-14)": 1
+    },
+    "risk_band": "medium",
+    "char_count": 10521
+  }
+}

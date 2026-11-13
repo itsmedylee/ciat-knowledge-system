@@ -1,0 +1,38 @@
+{
+  "genre": "blog",
+  "change_rate": {
+    "rate": 0.0027,
+    "display": "0.3%",
+    "scope": "전문",
+    "verdict": "OK"
+  },
+  "s1_targets": [],
+  "antithesis": {
+    "before": 3,
+    "after": 3,
+    "verdict": "스킵 (원문 대구 < 5)"
+  },
+  "golden": [],
+  "sentence_touch": {
+    "rate": 0.0136,
+    "touched": 4,
+    "total": 294
+  },
+  "numbers_dropped": [],
+  "modality": {
+    "lost_pairs": [],
+    "uncertain_pairs": [],
+    "deontic_before": 43,
+    "deontic_after": 43,
+    "hedge_before": 17,
+    "hedge_after": 17,
+    "verdict": "OK"
+  },
+  "modality_restored": 0,
+  "modality_deferred": 0,
+  "gate": {
+    "verdict": "OK — 수렴",
+    "exit_code": 0
+  },
+  "note": "verify_gates.py --genre blog --json 실행 출력과 restore_modality.py 출력을 기록했습니다. 명시적 Markdown 줄바꿈 공백 복원 후 게이트를 재실행한 최종값입니다."
+}
