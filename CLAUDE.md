@@ -35,7 +35,7 @@
     │   ├── 기장/       ← [핵심 업무축] 세무기장 전 과정. 첫 실제 문서와 함께 생성
     │   │   └── 기장업무-전체프로세스.md  ← 기장 MOC·업무 진입점
     │   └── 상담/·세무조사/·신고/·검토/·cases/·checklists/  ← 각각 첫 문서 생길 때 생성
-    │                     ⚠️ practice/회계감사/ 는 legacy(도메인축) — 지금 이동 않고 유지, 향후 migration 대상
+    │                     practice/회계감사/ 는 회계감사 업무의 유효한 전문 분류다. 감사 절차·체크리스트를 이곳에 둔다.
     ├── business/      ← [레이어] 전문성·실무의 상품화·판매·운영 (6번째 레이어)
     │                     (strategy/·services/·sales/·marketing/·operations/ — 첫 문서 생길 때 생성)
     └── notes/         ← [레이어] 종합·질의 결과·학습 코스(가이드)·견해(오피니언)
@@ -257,7 +257,7 @@ sources: [소스-파일명]        # 이 페이지가 참조하는 raw 소스 (�
 - ⚠️ **practice 문서에서 법리 내용을 복제하지 않는다.** 반드시 관련 topic을 `[[내부링크]]`로 참조한다(정본 원칙 유지). practice는 "순서·마감·양식·주의점"을, topics는 "근거·개념"을 담는다.
 - practice 문서 frontmatter: `type: workflow`, `domain`(+세무면 `taxType`). 하위 폴더는 첫 문서가 생길 때 만든다.
 - **practice 2차축 = 업무 프로세스/유형(도메인 아님).** 신규 practice 문서는 프로세스 축으로 만든다: `기장/`·`상담/`·`세무조사/`·`신고/`·`검토/`·`cases/`·`checklists/` 등. 세목·도메인은 폴더가 아니라 frontmatter(`domain`/`taxType`)·tags로 표현한다.
-- ⚠️ **`practice/회계감사/`(도메인축)는 legacy다.** 지금 이동하지 않고 유지하며 향후 별도 migration 대상으로 기록한다(신규 문서는 프로세스 축으로).
+- **`practice/회계감사/`는 회계감사 업무의 유효한 전문 분류다**(사용자 확정, 2026-11-13). 회계감사 절차·체크리스트는 이 폴더에 두며 폐지·이관 대상으로 취급하지 않는다. 일반 자문 검토는 `practice/검토/`에 둔다.
 - `practice/cases/` 문서는 `case_type`(simulated·anonymized-real·external) 필수 — 아래 정보보호 규칙 참조.
 
 ### 세무기장 (`practice/기장`) 핵심 업무축
