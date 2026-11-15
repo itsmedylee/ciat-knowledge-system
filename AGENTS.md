@@ -19,7 +19,9 @@
 ├── automation/        ← 수집 자동화 스크립트. **지식 레이어가 아니다.**
 │                        ingest·lint 대상에서 제외한다. (현재: youtube/ — 채널 감시 → raw 수집)
 ├── drafts/            ← 외부 게시용 글(블로그·칼럼)의 작성 작업장. **지식 레이어가 아니다.**
-│                        ingest·lint 대상에서 제외한다. 규칙은 drafts/README.md. 게시 후 결과물만 wiki/business/marketing/ 으로 보관
+│                        ingest·lint 대상에서 제외한다. 규칙은 drafts/README.md.
+│                        세법 갈래(drafts/ 바로 아래): 검증 최종본을 정본에 역반영, 게시 후 wiki/business/marketing/ 보관·raw 수집
+│                        일반 갈래(drafts/일반/, [생산성] 등): 정본 반영·marketing 보관·raw 수집 모두 하지 않는다
 ├── raw/               ← 원본 소스·가공 전 자료 (불변). 너는 읽기만 하고 절대 수정하지 않는다.
 └── wiki/              ← LLM이 생성·소유하는 마크다운. 네가 만들고 유지한다.
     ├── index.md       ← 콘텐츠 카탈로그 (도메인 중심 그룹화, 모든 페이지 + 한 줄 요약)
